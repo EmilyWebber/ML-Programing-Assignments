@@ -1,0 +1,25 @@
+Summary Statistics For Mock Student Data
+
+First_name
+Missing Values : 0
+
+Last_name
+Missing Values : 0
+
+Days_missed
+Missing Values : 192
+
+Gender
+Missing Values : 226
+
+Age
+Missing Values : 229
+
+GPA
+Missing Values : 221
+
+State
+Missing Values : 116
+
+Graduated
+Missing Values : 0
