@@ -2,24 +2,41 @@ Summary Statistics For Mock Student Data
 
 First_name
 Missing Values : 0
+Mode: Amy, Count: 12
 
 Last_name
 Missing Values : 0
+Mode: Ross, Count: 13
 
 Days_missed
 Missing Values : 192
+Mode: 6, Count: 31
+Mean : 18.0111386139
+Median: 18.0
+Std Dev: 9.62341022955
 
 Gender
 Missing Values : 226
+Mode: Female, Count: 398
 
 Age
 Missing Values : 229
+Mode: 15, Count: 174
+Mean : 16.9961089494
+Median: 17.0
+Std Dev: 1.45712094952
 
 GPA
 Missing Values : 221
+Mode: 2, Count: 265
+Mean : 2.98844672657
+Median: 3.0
+Std Dev: 0.817724087709
 
 State
 Missing Values : 116
+Mode: Texas, Count: 97
 
 Graduated
 Missing Values : 0
+Mode: Yes, Count: 593
