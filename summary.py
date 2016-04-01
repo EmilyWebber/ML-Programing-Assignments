@@ -1,5 +1,6 @@
 import csv
 import numpy as np
+import matplotlib.pyplot as plt
 
 READ_FILE = "mock_student_data.csv"
 WRITE_TEXT = "student_summaries.txt"
@@ -64,11 +65,27 @@ def missing(each, counts, f):
 	else:
 		f.write("\nMissing Values : 0")
 
-def graph():
+def graph(header, inner_dict):
 	'''
 	Need column header, type, count
 	'''
-	pass
+	labels = []
+	values = []
+	for x, y in inner_dict.items():
+		if x == MISSING:
+			labels.append("Missing")
+		else:
+			labels.append(x)
+		values.append(y)
+	xs = np.arange(len(labels))
+	x_ticks = xs + 0.4
+	fig = plt.figure()
+	plt.title("Histogram for {}".format(header))
+	plt.xlabel("Possible Values")
+	plt.ylabel("Number of each value")
+	plt.xticks(x_ticks, labels)
+	plt.bar(xs, values)
+	fig.savefig("Images/Histogram-{}.png".format(header))
 
 
 def summary(counts, maps, numerical):
@@ -89,6 +106,7 @@ def summary(counts, maps, numerical):
 					if c > mode:
 						mode = c
 						mode_str = val
+
 			f.write("\nMode: {}, Count: {}".format(mode_str, mode))
 			if maps[each] in NUMERICAL:
 				f.write("\nMean : {}".format(np.mean(numerical[each])))
@@ -96,7 +114,7 @@ def summary(counts, maps, numerical):
 				f.write("\nStd Dev: {}".format(np.std(numerical[each])))
 
 			if maps[each] in HISTOGRAM:
-				graph()
+				graph(each, counts[each])
 
 if __name__ == "__main__":
 	counts, maps, numerical = read()
