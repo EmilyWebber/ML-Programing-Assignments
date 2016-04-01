@@ -5,7 +5,7 @@ WRITE_MEAN = "Output/mean_transformed.csv"
 WRITE_CONDITIONAL = "Output/conditional_transformed.csv"
 
 MEAN = {5:17, 6:3, 7:18}
-COND_MEAN = {5: {"Yes": 0, "No":0}, 6: {"Yes": 0, "No":0}, 7: {"Yes": 0, "No":0}}
+COND_MEAN = {5: {"Yes": 17, "No":17}, 6: {"Yes": 3.5, "No":2.5}, 7: {"Yes": 17, "No":19}}
 
 COL_ID = [5,6,7]
 CLASS_ID = 8
@@ -39,7 +39,6 @@ def transform_means():
 
 			for i in COL_ID:
 				if len(row[i]) < 1:
-					# class = row[CLASS_ID]
 					row[i] = COND_MEAN[i][row[CLASS_ID]]
 			c_write.writerow(row)
 

@@ -14,6 +14,8 @@ Mode: 6, Count: 31
 Mean : 18.0111386139
 Median: 18.0
 Std Dev: 9.62341022955
+Conditional Graduated Mean: 16.7755610973
+Conditional Did Not Graduate Mean: 19.2285012285
 
 Gender
 Missing Values : 226
@@ -25,6 +27,8 @@ Mode: 15, Count: 174
 Mean : 16.9961089494
 Median: 17.0
 Std Dev: 1.45712094952
+Conditional Graduated Mean: 16.9588744589
+Conditional Did Not Graduate Mean: 17.0517799353
 
 GPA
 Missing Values : 221
@@ -32,6 +36,8 @@ Mode: 2, Count: 265
 Mean : 2.98844672657
 Median: 3.0
 Std Dev: 0.817724087709
+Conditional Graduated Mean: 3.50537634409
+Conditional Did Not Graduate Mean: 2.51597051597
 
 State
 Missing Values : 116

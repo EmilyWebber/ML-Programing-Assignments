@@ -7,6 +7,7 @@ WRITE_TEXT = "Output/student_summaries.txt"
 MISSING = ''
 NUMERICAL = [7,6,5]
 HISTOGRAM = [4,5,6,7,8]
+CLASS_ID = 8
 
 def get_initial_dicts(row):
 	'''
@@ -25,13 +26,15 @@ def get_initial_dicts(row):
 def read():
 	'''
 	Reads in the csv file
-	Returns three dictionaries:
+	Returns four dictionaries:
 		counts: {column : {instance: count, instance: count},
 				column : {instance: cout, instance: count}}
 		maps: {column: index, index: column}
 		numerical: {Age: list, GPA: list, Days Missed: list}
+		conditional: {Age: {"Yes": list, "No": list}, GPA: {"Yes": list, "No":list}
 	'''
 	numerical = {}
+	conditional = {}
 
 	with open(READ_FILE, 'rU') as f:
 		fields = csv.reader(f)
@@ -48,16 +51,26 @@ def read():
 						counts[header][val] = 1
 					else:
 						counts[header][val] += 1
+
 					if idx in NUMERICAL:
 						try:
 							i = int(val)
 							if header not in numerical:
 								numerical[header] = []
 							numerical[header].append(i)
+
+							if header not in conditional:
+								conditional[header] = {}
+							if row[CLASS_ID] not in conditional[header]:
+								conditional[header][row[CLASS_ID]] = [i]
+							else:
+								conditional[header][row[CLASS_ID]].append(i)
+
 						except:
 							pass
 
-	return counts, maps, numerical
+	return counts, maps, numerical, conditional
+
 
 def missing(each, counts, f):
 	'''
@@ -91,7 +104,7 @@ def graph(header, inner_dict):
 	plt.bar(xs, values)
 	fig.savefig("Output/Images/Histogram-{}.png".format(header))
 
-def summary(counts, maps, numerical):
+def summary(counts, maps, numerical, conditional):
 	with open(WRITE_TEXT, "w") as f:
 		f.write("Summary Statistics For Mock Student Data")
 		for each in list(counts.keys()):
@@ -117,10 +130,12 @@ def summary(counts, maps, numerical):
 				f.write("\nMean : {}".format(np.mean(numerical[each])))
 				f.write("\nMedian: {}".format(np.median(numerical[each])))
 				f.write("\nStd Dev: {}".format(np.std(numerical[each])))
+				f.write("\nConditional Graduated Mean: {}".format(np.mean(conditional[each]["Yes"])))
+				f.write("\nConditional Did Not Graduate Mean: {}".format(np.mean(conditional[each]["No"])))
 
 			if maps[each] in HISTOGRAM:
 				graph(each, counts[each])
 
 if __name__ == "__main__":
-	counts, maps, numerical = read()
-	summary(counts, maps, numerical)
+	counts, maps, numerical, conditional = read()
+	summary(counts, maps, numerical, conditional)
