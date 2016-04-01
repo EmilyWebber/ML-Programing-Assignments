@@ -3,11 +3,24 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 READ_FILE = "mock_student_data.csv"
-WRITE_TEXT = "student_summaries.txt"
-WRITE_CSV = "transformed_student_data.csv"
+WRITE_TEXT = "Output/student_summaries.txt"
 MISSING = ''
 NUMERICAL = [7,6,5]
 HISTOGRAM = [4,5,6,7,8]
+
+def get_initial_dicts(row):
+	'''
+	Takes a csv row, returns a two-way dictionary of headers
+	And initialized counts dict with each header : {}
+	'''
+	maps = {}
+	counts = {}
+	for idx, field in enumerate(row):
+		if idx > 0:
+			counts[field] = {}
+			maps[idx] = field
+			maps[field] = idx
+	return maps, counts
 
 def read():
 	'''
@@ -18,20 +31,11 @@ def read():
 		maps: {column: index, index: column}
 		numerical: {Age: list, GPA: list, Days Missed: list}
 	'''
-	counts = {}
-	maps = {}
 	numerical = {}
 
 	with open(READ_FILE, 'rU') as f:
 		fields = csv.reader(f)
-		headers = next(fields)
-		for idx, field in enumerate(headers):
-
-			# skip the IDs, add all the other headers
-			if idx > 0:
-				counts[field] = {}
-				maps[idx] = field
-				maps[field] = idx
+		maps, counts = get_initial_dicts(next(fields))
 
 		# count all the values, add to the dictionary
 		for row in fields:
@@ -85,8 +89,7 @@ def graph(header, inner_dict):
 	plt.ylabel("Number of each value")
 	plt.xticks(x_ticks, labels)
 	plt.bar(xs, values)
-	fig.savefig("Images/Histogram-{}.png".format(header))
-
+	fig.savefig("Output/Images/Histogram-{}.png".format(header))
 
 def summary(counts, maps, numerical):
 	with open(WRITE_TEXT, "w") as f:
@@ -108,6 +111,8 @@ def summary(counts, maps, numerical):
 						mode_str = val
 
 			f.write("\nMode: {}, Count: {}".format(mode_str, mode))
+
+			# get conditional means here
 			if maps[each] in NUMERICAL:
 				f.write("\nMean : {}".format(np.mean(numerical[each])))
 				f.write("\nMedian: {}".format(np.median(numerical[each])))
