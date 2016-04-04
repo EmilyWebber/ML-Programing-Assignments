@@ -25,7 +25,7 @@ def get_initial_dicts(row):
 
 def read():
 	'''
-	Reads in the csv file
+	Reads in the global csv file
 	Returns four dictionaries:
 		counts: {column : {instance: count, instance: count},
 				column : {instance: cout, instance: count}}
@@ -71,11 +71,10 @@ def read():
 
 	return counts, maps, numerical, conditional
 
-
 def missing(each, counts, f):
 	'''
-	Takes a key, a dictionary, and a write-to file
-	Writes the number of missing values to the file
+	Takes a key, a dictionary, and a csv pointer object
+	Writes the number of missing values to the csv
 	'''
 	if MISSING in counts[each]:
 		f.write("\nMissing Values: {}".format(counts[each][MISSING]))
@@ -84,7 +83,8 @@ def missing(each, counts, f):
 
 def graph(header, inner_dict):
 	'''
-	Need column header, type, count
+	Takes column header and inner dict of types and counts,
+	Creates a histogram
 	'''
 	labels = []
 	values = []
@@ -125,7 +125,6 @@ def summary(counts, maps, numerical, conditional):
 
 			f.write("\nMode: {}, Count: {}".format(mode_str, mode))
 
-			# get conditional means here
 			if maps[each] in NUMERICAL:
 				f.write("\nMean: {}".format(np.mean(numerical[each])))
 				f.write("\nMedian: {}".format(np.median(numerical[each])))
