@@ -78,9 +78,9 @@ def missing(each, counts, f):
 	Writes the number of missing values to the file
 	'''
 	if MISSING in counts[each]:
-		f.write("\nMissing Values : {}".format(counts[each][MISSING]))
+		f.write("\nMissing Values: {}".format(counts[each][MISSING]))
 	else:
-		f.write("\nMissing Values : 0")
+		f.write("\nMissing Values: 0")
 
 def graph(header, inner_dict):
 	'''
@@ -127,7 +127,7 @@ def summary(counts, maps, numerical, conditional):
 
 			# get conditional means here
 			if maps[each] in NUMERICAL:
-				f.write("\nMean : {}".format(np.mean(numerical[each])))
+				f.write("\nMean: {}".format(np.mean(numerical[each])))
 				f.write("\nMedian: {}".format(np.median(numerical[each])))
 				f.write("\nStd Dev: {}".format(np.std(numerical[each])))
 				f.write("\nConditional Graduated Mean: {}".format(np.mean(conditional[each]["Yes"])))
