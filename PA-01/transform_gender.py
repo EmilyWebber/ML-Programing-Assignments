@@ -23,13 +23,10 @@ def get_gender(name):
 	'''
 	Takes a single name, returns the gender of the name
 	'''
-	key = "/?apikey=" + get_key()
-	url = "name=" + name + key
-	print (url)
+	url = "name=" + name
 	req = requests.get("http://api.genderize.io?" + url)
 	j = json.loads(req.text)
-	print (j)
-	# return (json.loads(req.text)["gender"].title())
+	return (json.loads(req.text)["gender"].title())
 
 def transform_gender():
 	'''
@@ -40,15 +37,11 @@ def transform_gender():
 		write = csv.writer(g)
 		h = next(fields)
 		write.writerow(h)
-		count = 0
 		for row in fields:
 			if len(row[GENDER]) < 1:
-				print ("found another missing gender")
-				count += 1
-				print ("Count is {}".format(count))
-				# row[GENDER] = get_gender(row[FIRST])
+				row[GENDER] = get_gender(row[FIRST])
 			write.writerow(row)
 
 if __name__ == "__main__":
-	# transform_gender()
-	get_gender("Shandra")
+	transform_gender()
+

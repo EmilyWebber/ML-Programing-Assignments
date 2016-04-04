@@ -2,39 +2,39 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 81,Joan,Reyes,California,Female,19,3,4,No
 189,Patrick,Daniels,Colorado,Male,19,3,4,No
 239,Brenda,Marshall,Idaho,Female,,3,4,No
-587,Lisa,Medina,Florida,,15,2,4,No
+587,Lisa,Medina,Florida,Female,15,2,4,No
 595,Cheryl,Rice,Pennsylvania,Female,16,2,4,No
 628,Christina,Roberts,California,Female,17,2,4,No
 659,Carlos,Carpenter,California,Male,18,3,4,No
 701,John,Patterson,,Male,15,2,4,No
 802,Angela,Crawford,Ohio,Female,,3,4,No
 815,Gary,Matthews,California,Male,18,3,4,No
-842,Tammy,Stone,,,15,3,4,No
-969,Jean,Gonzales,New York,,,3,4,No
+842,Tammy,Stone,,Female,15,3,4,No
+969,Jean,Gonzales,New York,Female,,3,4,No
 56,Kathleen,Cole,Texas,Female,16,3,5,No
 169,Matthew,Cox,District of Columbia,Male,19,2,5,No
 216,Jeremy,Wood,Nevada,Male,,2,5,No
 244,Matthew,Greene,Nevada,Male,,2,5,No
 325,Scott,Stone,Minnesota,Male,16,3,5,No
-339,Jeffrey,Peterson,New Mexico,,19,2,5,No
+339,Jeffrey,Peterson,New Mexico,Male,19,2,5,No
 646,Gloria,Wheeler,Texas,Female,,2,5,No
 783,Debra,Smith,New York,Female,17,2,5,No
-881,Aaron,Shaw,Texas,,15,2,5,No
+881,Aaron,Shaw,Texas,Male,15,2,5,No
 65,Sarah,Garcia,Florida,Female,19,2,6,No
 112,Kathleen,Dixon,New York,Female,,2,6,No
 214,Catherine,Graham,,Female,,2,6,No
 250,Jerry,Sanders,Georgia,Male,19,3,6,No
 438,Lawrence,Flores,District of Columbia,Male,16,3,6,No
-512,Robert,Gomez,Texas,,,3,6,No
+512,Robert,Gomez,Texas,Male,,3,6,No
 611,Dorothy,Boyd,Washington,Female,15,2,6,No
-643,Brandon,King,Michigan,,,2,6,No
+643,Brandon,King,Michigan,Male,,2,6,No
 656,Phillip,Morales,Illinois,Male,18,2,6,No
-751,Kimberly,Day,Florida,,19,2,6,No
+751,Kimberly,Day,Florida,Female,19,2,6,No
 768,Betty,Rose,Hawaii,Female,17,3,6,No
-778,Donna,Ramirez,Texas,,16,3,6,No
+778,Donna,Ramirez,Texas,Female,16,3,6,No
 873,William,Harris,Alabama,Male,18,3,6,No
 877,Matthew,Brown,Iowa,Male,19,3,6,No
-901,Jennifer,Nguyen,Kansas,,,3,6,No
+901,Jennifer,Nguyen,Kansas,Female,,3,6,No
 63,Philip,Gomez,Florida,Male,18,2,7,No
 88,Sandra,Nguyen,,Female,,3,7,No
 148,Alan,Daniels,Minnesota,Male,17,3,7,No
@@ -51,16 +51,16 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 131,Jose,Morgan,Pennsylvania,Male,19,2,8,No
 134,Sean,Sanders,New York,Male,16,2,8,No
 186,Mark,Meyer,South Carolina,Male,,3,8,No
-288,Sean,Stephens,California,,18,2,8,No
+288,Sean,Stephens,California,Male,18,2,8,No
 300,Maria,King,California,Female,,2,8,No
 326,Ryan,Reed,Texas,Male,18,2,8,No
 340,Anthony,Daniels,Tennessee,Male,16,2,8,No
-406,Joseph,Mitchell,Colorado,,17,3,8,No
+406,Joseph,Mitchell,Colorado,Male,17,3,8,No
 502,Susan,Lewis,Texas,Female,,2,8,No
 548,Pamela,Stewart,Texas,Female,19,2,8,No
 728,Keith,Fernandez,District of Columbia,Male,19,3,8,No
 857,Thomas,Tucker,California,Male,,3,8,No
-860,Douglas,Burke,Illinois,,16,3,8,No
+860,Douglas,Burke,Illinois,Male,16,3,8,No
 909,Ruth,Ortiz,Pennsylvania,Female,17,2,8,No
 964,Arthur,Hill,,Male,17,3,8,No
 46,Irene,Johnson,Utah,Female,18,2,9,No
@@ -71,11 +71,11 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 274,Anthony,Franklin,Illinois,Male,,2,9,No
 279,Brenda,Butler,Virginia,Female,16,3,9,No
 460,Gregory,Griffin,South Dakota,Male,17,3,9,No
-500,Benjamin,Gibson,California,,,3,9,No
-580,Kathryn,Brooks,Tennessee,,18,2,9,No
-642,Ann,Perkins,New Hampshire,,17,3,9,No
+500,Benjamin,Gibson,California,Male,,3,9,No
+580,Kathryn,Brooks,Tennessee,Female,18,2,9,No
+642,Ann,Perkins,New Hampshire,Female,17,3,9,No
 655,Kathleen,Brown,,Female,16,2,9,No
-682,Jean,Sullivan,Arizona,,19,2,9,No
+682,Jean,Sullivan,Arizona,Female,19,2,9,No
 727,Sara,Meyer,California,Female,18,2,9,No
 872,Janet,Cox,Texas,Female,,3,9,No
 18,Karen,Bell,Mississippi,Female,17,3,10,No
@@ -84,12 +84,12 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 234,Jerry,Webb,California,Male,18,2,10,No
 382,Shawn,Little,Pennsylvania,Male,19,3,10,No
 412,Chris,Sims,California,Male,,2,10,No
-427,Earl,Bradley,South Carolina,,19,2,10,No
+427,Earl,Bradley,South Carolina,Male,19,2,10,No
 494,Joyce,Peterson,West Virginia,Female,,3,10,No
 90,Shirley,Wheeler,Ohio,Female,,3,11,No
 242,Angela,Wagner,Texas,Female,16,2,11,No
-295,Pamela,Armstrong,Washington,,17,3,11,No
-492,Martin,Black,Texas,,15,3,11,No
+295,Pamela,Armstrong,Washington,Female,17,3,11,No
+492,Martin,Black,Texas,Male,15,3,11,No
 575,Russell,Bell,Oklahoma,Male,18,3,11,No
 735,Mark,Bishop,Ohio,Male,15,2,11,No
 845,Julia,White,District of Columbia,Female,15,3,11,No
@@ -108,46 +108,46 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 527,Terry,Armstrong,Missouri,Male,18,2,12,No
 680,Phyllis,Wagner,,Female,18,3,12,No
 711,Johnny,Chapman,,Male,,2,12,No
-781,Lois,Hansen,New York,,17,2,12,No
+781,Lois,Hansen,New York,Female,17,2,12,No
 891,Sharon,Dixon,District of Columbia,Female,19,3,12,No
 12,Samuel,George,Georgia,Male,15,3,13,No
-32,Kathleen,Lee,New Jersey,,17,3,13,No
-48,Mark,Wheeler,California,,16,2,13,No
+32,Kathleen,Lee,New Jersey,Female,17,3,13,No
+48,Mark,Wheeler,California,Male,16,2,13,No
 99,Amy,Alexander,,Female,19,3,13,No
 312,Emily,Edwards,New York,Female,,2,13,No
-424,Marie,Perry,,,17,3,13,No
+424,Marie,Perry,,Female,17,3,13,No
 613,Nancy,Duncan,California,Female,19,3,13,No
 640,Kathleen,Ramos,California,Female,,2,13,No
 683,Christina,Woods,New York,Female,15,2,13,No
 699,Martha,Alvarez,Colorado,Female,16,2,13,No
 779,Frank,Miller,Texas,Male,,2,13,No
 932,Barbara,Parker,,Female,,2,13,No
-957,Justin,Lawrence,Florida,,,3,13,No
-25,Anthony,Burke,Texas,,16,2,14,No
+957,Justin,Lawrence,Florida,Male,,3,13,No
+25,Anthony,Burke,Texas,Male,16,2,14,No
 67,Ralph,Jacobs,Florida,Male,18,2,14,No
 69,Henry,Howell,California,Male,,3,14,No
-156,Juan,Bradley,Kentucky,,19,2,14,No
+156,Juan,Bradley,Kentucky,Male,19,2,14,No
 436,Todd,Gutierrez,Illinois,Male,16,2,14,No
-472,Dorothy,Turner,Kentucky,,18,3,14,No
-509,Jerry,Fox,Illinois,,19,2,14,No
+472,Dorothy,Turner,Kentucky,Female,18,3,14,No
+509,Jerry,Fox,Illinois,Male,19,2,14,No
 629,Diana,Ryan,Texas,Female,15,2,14,No
-670,Stephanie,Henry,New York,,18,2,14,No
+670,Stephanie,Henry,New York,Female,18,2,14,No
 673,Antonio,Perez,North Carolina,Male,17,2,14,No
-746,Henry,Peters,,,19,2,14,No
-820,Deborah,Lawson,Florida,,16,2,14,No
+746,Henry,Peters,,Male,19,2,14,No
+820,Deborah,Lawson,Florida,Female,16,2,14,No
 821,Paul,Stevens,,Male,18,3,14,No
 832,Kenneth,Moreno,,Male,19,2,14,No
-883,Evelyn,Watson,South Carolina,,15,2,14,No
+883,Evelyn,Watson,South Carolina,Female,15,2,14,No
 903,Christina,Hall,Florida,Female,18,2,14,No
 23,Lori,Lopez,,Female,19,3,15,No
 27,Harry,Larson,,Male,18,3,15,No
 78,James,Fowler,District of Columbia,Male,17,3,15,No
-102,Juan,Romero,Texas,,16,3,15,No
+102,Juan,Romero,Texas,Male,16,3,15,No
 116,Eugene,Ferguson,Connecticut,Male,16,3,15,No
-157,Anne,Stone,New York,,17,2,15,No
+157,Anne,Stone,New York,Female,17,2,15,No
 195,George,Rogers,Michigan,Male,19,3,15,No
 203,Peter,Mitchell,District of Columbia,Male,19,3,15,No
-313,Virginia,Howard,New York,,19,3,15,No
+313,Virginia,Howard,New York,Female,19,3,15,No
 470,Wanda,Greene,North Carolina,Female,,3,15,No
 515,Jose,Gordon,Louisiana,Male,,3,15,No
 516,Catherine,Bradley,Arizona,Female,17,2,15,No
@@ -155,24 +155,24 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 562,Michelle,Kim,Indiana,Female,,3,15,No
 565,Keith,Warren,Ohio,Male,,3,15,No
 579,Beverly,Gordon,Texas,Female,17,3,15,No
-722,Brandon,Perry,California,,,3,15,No
+722,Brandon,Perry,California,Male,,3,15,No
 763,Helen,Mcdonald,California,Female,18,2,15,No
 819,Andrew,Reyes,Texas,Male,15,2,15,No
 833,Mildred,Welch,Texas,Female,15,3,15,No
-864,Barbara,Mccoy,New York,,19,3,15,No
+864,Barbara,Mccoy,New York,Female,19,3,15,No
 867,Joe,Franklin,Ohio,Male,15,2,15,No
-915,Larry,Smith,Maryland,,16,3,15,No
+915,Larry,Smith,Maryland,Male,16,3,15,No
 967,Edward,Warren,Florida,Male,19,3,15,No
 984,Jessica,Gonzales,Nevada,Female,17,3,15,No
 117,Johnny,Webb,South Carolina,Male,18,3,16,No
 334,Linda,Harvey,Alabama,Female,,2,16,No
 425,Cheryl,Cruz,Nebraska,Female,18,2,16,No
 480,Frank,Gonzalez,Florida,Male,18,2,16,No
-493,Theresa,Martin,California,,,3,16,No
-535,Teresa,Grant,Virginia,,16,3,16,No
+493,Theresa,Martin,California,Female,,3,16,No
+535,Teresa,Grant,Virginia,Female,16,3,16,No
 657,Joe,Watson,,Male,,3,16,No
 791,Wayne,Rogers,Alaska,Male,,3,16,No
-888,Jesse,Hunter,Pennsylvania,,18,2,16,No
+888,Jesse,Hunter,Pennsylvania,Male,18,2,16,No
 925,Diane,Griffin,New York,Female,16,2,16,No
 34,Shawn,Fisher,Indiana,Male,,2,17,No
 107,Steven,Welch,New York,Male,16,3,17,No
@@ -180,14 +180,14 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 251,Lisa,Owens,West Virginia,Female,16,3,17,No
 254,Eugene,Scott,Florida,Male,,2,17,No
 287,Christine,Freeman,Georgia,Female,,3,17,No
-297,Ernest,Day,Florida,,15,3,17,No
+297,Ernest,Day,Florida,Male,15,3,17,No
 362,Sara,Perry,North Carolina,Female,,3,17,No
 380,Mildred,Morgan,Oklahoma,Female,,2,17,No
 459,Steven,Baker,Florida,Male,,2,17,No
 484,Wayne,Palmer,California,Male,,3,17,No
 570,Helen,Day,Massachusetts,Female,15,2,17,No
 684,Paula,Webb,Minnesota,Female,16,2,17,No
-817,Phyllis,Edwards,Florida,,,3,17,No
+817,Phyllis,Edwards,Florida,Female,,3,17,No
 831,Kathryn,Alexander,New Jersey,Female,19,2,17,No
 16,Phyllis,Burton,Texas,Female,16,3,18,No
 129,Laura,Ford,Texas,Female,,3,18,No
@@ -196,37 +196,37 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 510,Ryan,Woods,Texas,Male,17,3,18,No
 513,Robin,Bailey,Illinois,Female,17,2,18,No
 568,Raymond,Miller,Ohio,Male,,2,18,No
-803,Clarence,Robinson,Texas,,15,3,18,No
+803,Clarence,Robinson,Texas,Male,15,3,18,No
 835,Roy,Butler,Texas,Male,19,3,18,No
 975,Jessica,Montgomery,Michigan,Female,18,3,18,No
 91,Heather,Olson,Texas,Female,,2,19,No
 347,Timothy,George,Wisconsin,Male,,3,19,No
 405,Jack,Bell,New York,Male,17,2,19,No
-477,Jeremy,Stephens,California,,19,3,19,No
+477,Jeremy,Stephens,California,Male,19,3,19,No
 544,Phillip,Olson,Tennessee,Male,,3,19,No
 604,Jean,Washington,,Female,15,2,19,No
 664,Eugene,Lewis,Missouri,Male,16,3,19,No
 671,Janet,Ray,,Female,,3,19,No
 708,Jason,Richardson,Ohio,Male,16,3,19,No
 790,Carolyn,Kelley,Texas,Female,17,2,19,No
-822,Nancy,Oliver,Indiana,,15,2,19,No
+822,Nancy,Oliver,Indiana,Female,15,2,19,No
 1000,Martin,Fowler,Texas,Male,18,3,19,No
 7,Stephanie,Barnes,Oklahoma,Female,,3,20,No
 152,Fred,Henderson,Nevada,Male,19,3,20,No
-246,William,Matthews,,,15,2,20,No
+246,William,Matthews,,Male,15,2,20,No
 258,Ronald,Thomas,Florida,Male,15,2,20,No
-530,Carl,Rodriguez,Arizona,,15,2,20,No
-721,Kimberly,Montgomery,,,17,2,20,No
+530,Carl,Rodriguez,Arizona,Male,15,2,20,No
+721,Kimberly,Montgomery,,Female,17,2,20,No
 740,Bruce,Howard,,Male,,2,20,No
 742,Thomas,Baker,Missouri,Male,15,2,20,No
-757,Joe,Howell,,,15,2,20,No
+757,Joe,Howell,,Male,15,2,20,No
 782,Alan,Pierce,California,Male,18,3,20,No
-818,Sarah,Lawson,,,16,2,20,No
+818,Sarah,Lawson,,Female,16,2,20,No
 966,Rachel,Hawkins,Minnesota,Female,,3,20,No
-49,Aaron,Reed,Washington,,,2,21,No
+49,Aaron,Reed,Washington,Male,,2,21,No
 106,Mary,Sanchez,Michigan,Female,16,2,21,No
-407,Phyllis,Bradley,Florida,,15,3,21,No
-681,Mildred,Fernandez,North Carolina,,15,2,21,No
+407,Phyllis,Bradley,Florida,Female,15,3,21,No
+681,Mildred,Fernandez,North Carolina,Female,15,2,21,No
 865,Sara,Garcia,Louisiana,Female,19,3,21,No
 921,Kathy,Fernandez,New York,Female,,2,21,No
 172,Gregory,Diaz,Michigan,Male,19,2,22,No
@@ -235,22 +235,22 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 359,Christina,Cox,Missouri,Female,18,2,22,No
 455,Paula,Myers,Massachusetts,Female,18,3,22,No
 462,Donald,Banks,Pennsylvania,Male,19,3,22,No
-608,Carlos,Freeman,California,,19,3,22,No
+608,Carlos,Freeman,California,Male,19,3,22,No
 697,Daniel,Peterson,Texas,Male,,3,22,No
 849,Christina,Moore,New York,Female,19,3,22,No
-910,Diane,Austin,,,,2,22,No
-9,Betty,Miller,,,17,3,23,No
+910,Diane,Austin,,Female,,2,22,No
+9,Betty,Miller,,Female,17,3,23,No
 164,Pamela,Phillips,Washington,Female,17,3,23,No
-167,Angela,Marshall,Tennessee,,18,3,23,No
-174,Marilyn,Martinez,Florida,,17,3,23,No
+167,Angela,Marshall,Tennessee,Female,18,3,23,No
+174,Marilyn,Martinez,Florida,Female,17,3,23,No
 185,Tammy,Flores,,Female,,3,23,No
 193,Eugene,Porter,Kentucky,Male,18,3,23,No
 323,Jennifer,Gonzales,New York,Female,17,3,23,No
-335,Patricia,Chapman,Ohio,,,2,23,No
-360,Bonnie,Morrison,,,,3,23,No
+335,Patricia,Chapman,Ohio,Female,,2,23,No
+360,Bonnie,Morrison,,Female,,3,23,No
 391,Brandon,Ferguson,Texas,Male,17,2,23,No
 435,Denise,Stewart,Montana,Female,17,2,23,No
-453,Michelle,Stone,Wisconsin,,,2,23,No
+453,Michelle,Stone,Wisconsin,Female,,2,23,No
 503,Frank,Jacobs,Washington,Male,15,2,23,No
 569,Daniel,Fields,Kentucky,Male,17,3,23,No
 851,Jean,Gonzalez,Missouri,Female,17,3,23,No
@@ -265,16 +265,16 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 719,Cynthia,Garza,Ohio,Female,18,3,24,No
 913,Melissa,Daniels,Indiana,Female,,2,24,No
 74,Kelly,Wheeler,New York,Female,16,3,25,No
-161,Evelyn,Berry,,,18,2,25,No
+161,Evelyn,Berry,,Female,18,2,25,No
 289,Pamela,Hill,,Female,,2,25,No
 309,Patricia,Hayes,Florida,Female,19,2,25,No
 390,Raymond,Myers,Washington,Male,,2,25,No
 448,Norma,Moore,North Carolina,Female,15,3,25,No
 450,Melissa,Miller,Nevada,Female,18,3,25,No
-491,Cheryl,Russell,Nebraska,,19,3,25,No
+491,Cheryl,Russell,Nebraska,Female,19,3,25,No
 554,Samuel,Young,Delaware,Male,19,3,25,No
-635,Melissa,Cole,Texas,,18,3,25,No
-689,Beverly,Kelley,Arkansas,,18,2,25,No
+635,Melissa,Cole,Texas,Female,18,3,25,No
+689,Beverly,Kelley,Arkansas,Female,18,2,25,No
 862,Kevin,Robinson,Montana,Male,,3,25,No
 905,Dennis,Stephens,Pennsylvania,Male,17,3,25,No
 982,Jane,Sims,Texas,Female,19,2,25,No
@@ -282,34 +282,34 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 245,Earl,Lawson,Massachusetts,Male,15,3,26,No
 408,Lori,Stewart,Texas,Female,16,2,26,No
 413,Brian,Hanson,Massachusetts,Male,17,2,26,No
-538,Henry,Murphy,California,,15,2,26,No
+538,Henry,Murphy,California,Male,15,2,26,No
 584,Ronald,Collins,Florida,Male,19,3,26,No
 610,Thomas,Ross,Florida,Male,,2,26,No
 691,Arthur,Wood,Indiana,Male,17,3,26,No
 762,Jimmy,Holmes,,Male,17,3,26,No
 784,Jennifer,Armstrong,California,Female,17,3,26,No
-810,Jeffrey,Berry,Pennsylvania,,15,2,26,No
+810,Jeffrey,Berry,Pennsylvania,Male,15,2,26,No
 961,Louise,Brooks,Utah,Female,,3,26,No
 994,Earl,Weaver,Ohio,Male,19,2,26,No
 30,Jesse,Hamilton,New York,Male,19,2,27,No
-80,Melissa,Harper,Kansas,,17,3,27,No
-285,Steve,Montgomery,Texas,,15,3,27,No
+80,Melissa,Harper,Kansas,Female,17,3,27,No
+285,Steve,Montgomery,Texas,Male,15,3,27,No
 303,Lillian,Knight,Colorado,Female,15,3,27,No
 351,Sara,Burke,Kentucky,Female,19,3,27,No
 536,Alice,Martinez,Missouri,Female,19,2,27,No
 549,Linda,Montgomery,Georgia,Female,15,2,27,No
 602,Sarah,Butler,Ohio,Female,,3,27,No
-694,Michelle,Foster,California,,17,3,27,No
-774,Mildred,Williamson,,,16,2,27,No
+694,Michelle,Foster,California,Female,17,3,27,No
+774,Mildred,Williamson,,Female,16,2,27,No
 785,Douglas,Fernandez,Florida,Male,19,3,27,No
 847,Rachel,Lee,,Female,19,3,27,No
-878,Adam,Larson,District of Columbia,,,3,27,No
+878,Adam,Larson,District of Columbia,Male,,3,27,No
 907,Michael,Grant,,Male,17,2,27,No
 927,Shirley,Kelly,California,Female,15,3,27,No
 951,Billy,Gonzales,South Dakota,Male,16,3,27,No
 4,Jerry,Ramos,California,Male,15,2,28,No
-123,William,Sanchez,,,15,3,28,No
-160,Raymond,James,Florida,,15,3,28,No
+123,William,Sanchez,,Male,15,3,28,No
+160,Raymond,James,Florida,Male,15,3,28,No
 180,Katherine,Alexander,Florida,Female,,3,28,No
 205,Diane,Rice,Texas,Female,15,3,28,No
 206,Shawn,Hansen,Kansas,Male,16,3,28,No
@@ -318,7 +318,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 355,Joyce,Baker,West Virginia,Female,17,2,28,No
 433,Mark,Cook,New Jersey,Male,15,3,28,No
 547,Walter,Lawson,District of Columbia,Male,17,2,28,No
-577,Lori,Gordon,Texas,,,2,28,No
+577,Lori,Gordon,Texas,Female,,2,28,No
 594,Walter,Garcia,California,Male,15,2,28,No
 692,Larry,Bennett,Ohio,Male,15,3,28,No
 744,Larry,Butler,Arizona,Male,16,3,28,No
@@ -328,7 +328,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 31,Susan,Evans,South Dakota,Female,15,2,29,No
 37,Bonnie,Parker,California,Female,19,2,29,No
 120,Linda,Wagner,New York,Female,16,3,29,No
-139,James,Russell,Florida,,19,2,29,No
+139,James,Russell,Florida,Male,19,2,29,No
 271,Raymond,Hill,District of Columbia,Male,,3,29,No
 324,Judy,Reyes,New York,Female,16,3,29,No
 379,Betty,Robertson,Texas,Female,19,3,29,No
@@ -339,13 +339,13 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 669,Brandon,Lawson,Pennsylvania,Male,19,3,29,No
 928,Ashley,Ramirez,Texas,Female,15,3,29,No
 972,Christopher,Stanley,Colorado,Male,16,2,29,No
-977,Carl,Bryant,Ohio,,17,2,29,No
+977,Carl,Bryant,Ohio,Male,17,2,29,No
 136,Harry,Reid,Mississippi,Male,,3,30,No
 165,Eugene,Weaver,Washington,Male,19,2,30,No
 354,Joyce,Bryant,California,Female,19,3,30,No
 371,Beverly,Wells,,Female,,3,30,No
 396,Steve,Perkins,South Carolina,Male,,2,30,No
-404,Edward,Gray,Texas,,18,2,30,No
+404,Edward,Gray,Texas,Male,18,2,30,No
 603,Peter,Martin,Washington,Male,19,3,30,No
 623,Catherine,Ross,Maine,Female,18,2,30,No
 770,Wayne,Brooks,,Male,,3,30,No
@@ -360,82 +360,82 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 356,Gary,Fernandez,Maryland,Male,16,3,31,No
 475,Brandon,Mendoza,Kentucky,Male,15,3,31,No
 600,Amy,Powell,,Female,15,2,31,No
-675,Theresa,Kennedy,Indiana,,15,2,31,No
+675,Theresa,Kennedy,Indiana,Female,15,2,31,No
 720,Louise,Edwards,Indiana,Female,17,3,31,No
 795,Gary,Baker,Alabama,Male,19,3,31,No
-798,Christopher,Butler,Minnesota,,17,2,31,No
-885,Betty,Stone,Colorado,,17,2,31,No
-922,Rebecca,Duncan,California,,,3,31,No
+798,Christopher,Butler,Minnesota,Male,17,2,31,No
+885,Betty,Stone,Colorado,Female,17,2,31,No
+922,Rebecca,Duncan,California,Female,,3,31,No
 952,Jean,Carr,North Dakota,Female,16,2,31,No
 985,Ralph,Freeman,California,Male,18,3,31,No
 64,Christopher,Wood,Arizona,Male,,3,32,No
-163,Maria,Medina,Missouri,,15,3,32,No
-281,Amy,Franklin,Florida,,18,3,32,No
+163,Maria,Medina,Missouri,Female,15,3,32,No
+281,Amy,Franklin,Florida,Female,18,3,32,No
 304,George,Arnold,Florida,Male,17,3,32,No
 333,Donna,Hunter,,Female,,3,32,No
 378,Kimberly,Morgan,New York,Female,18,2,32,No
 590,Timothy,Davis,Hawaii,Male,19,2,32,No
-826,Kimberly,Torres,,,,3,32,No
+826,Kimberly,Torres,,Female,,3,32,No
 840,Barbara,Turner,Pennsylvania,Female,17,2,32,No
 83,Craig,Tucker,Indiana,Male,19,2,33,No
 121,Carlos,Oliver,Florida,Male,16,2,33,No
 175,Carolyn,Daniels,Louisiana,Female,18,2,33,No
 220,Anne,Diaz,Texas,Female,16,2,33,No
-221,Carol,Welch,Texas,,19,3,33,No
+221,Carol,Welch,Texas,Female,19,3,33,No
 222,Paula,Clark,Minnesota,Female,19,2,33,No
-268,Donald,Little,Kentucky,,16,2,33,No
-431,Terry,Reynolds,South Carolina,,19,2,33,No
+268,Donald,Little,Kentucky,Male,16,2,33,No
+431,Terry,Reynolds,South Carolina,Male,19,2,33,No
 451,Amanda,Grant,Oklahoma,Female,15,3,33,No
-559,Victor,Robinson,Arizona,,19,2,33,No
+559,Victor,Robinson,Arizona,Male,19,2,33,No
 626,Anne,Kelley,Ohio,Female,16,2,33,No
 649,Betty,Mcdonald,Ohio,Female,17,2,33,No
 690,Evelyn,White,Massachusetts,Female,17,3,33,No
 761,Michael,James,Georgia,Male,,2,33,No
-800,Carol,Ward,Indiana,,16,2,33,No
+800,Carol,Ward,Indiana,Female,16,2,33,No
 895,Eric,Greene,California,Male,15,3,33,No
 53,Joseph,Nichols,Virginia,Male,19,3,34,No
 183,Randy,Jacobs,Florida,Male,18,3,34,No
 241,Christopher,Morgan,Texas,Male,15,3,34,No
 265,Adam,Perry,Georgia,Male,,2,34,No
 305,Frances,Parker,Indiana,Female,,3,34,No
-332,Doris,Scott,,,15,3,34,No
+332,Doris,Scott,,Female,15,3,34,No
 350,Harold,Evans,Colorado,Male,,2,34,No
 373,Dennis,Fields,Ohio,Male,16,3,34,No
 449,Catherine,Meyer,Indiana,Female,16,3,34,No
 471,Judith,Campbell,California,Female,16,3,34,No
-703,Janice,Matthews,Kentucky,,15,3,34,No
+703,Janice,Matthews,Kentucky,Female,15,3,34,No
 723,Shirley,Ford,North Carolina,Female,17,2,34,No
-775,Jerry,Hart,Tennessee,,19,2,34,No
+775,Jerry,Hart,Tennessee,Male,19,2,34,No
 128,Margaret,Johnston,Texas,Female,19,2,2,Yes
 166,Janet,Martin,Kansas,Female,17,3,2,Yes
 212,Robin,Perry,California,Female,15,4,2,Yes
 301,Evelyn,Robertson,Florida,Female,15,,2,Yes
-366,Todd,Hernandez,,,17,,2,Yes
-370,Lisa,Stevens,Alabama,,16,,2,Yes
+366,Todd,Hernandez,,Male,17,,2,Yes
+370,Lisa,Stevens,Alabama,Female,16,,2,Yes
 445,Daniel,Young,Pennsylvania,Male,16,4,2,Yes
-519,Jimmy,Hicks,Minnesota,,18,3,2,Yes
+519,Jimmy,Hicks,Minnesota,Male,18,3,2,Yes
 541,Alice,Snyder,Arkansas,Female,15,3,2,Yes
 631,Linda,Matthews,Wisconsin,Female,,4,2,Yes
 759,George,Gomez,California,Male,19,4,2,Yes
 792,Lisa,Romero,,Female,17,3,2,Yes
-804,Jack,Peters,Nevada,,15,3,2,Yes
+804,Jack,Peters,Nevada,Male,15,3,2,Yes
 836,Diane,Pierce,Indiana,Female,17,3,2,Yes
 924,Tina,Lopez,Indiana,Female,18,3,2,Yes
 955,Kathleen,Grant,Louisiana,Female,15,2,2,Yes
 962,Dennis,Schmidt,New York,Male,16,2,2,Yes
 981,Thomas,Myers,Texas,Male,15,3,2,Yes
-990,Anthony,Sanders,District of Columbia,,15,4,2,Yes
+990,Anthony,Sanders,District of Columbia,Male,15,4,2,Yes
 11,Stephanie,Harris,,Female,,,3,Yes
-13,Todd,Phillips,Indiana,,,2,3,Yes
+13,Todd,Phillips,Indiana,Male,,2,3,Yes
 26,Katherine,Rodriguez,Arizona,Female,16,4,3,Yes
-77,Emily,Frazier,California,,16,3,3,Yes
+77,Emily,Frazier,California,Female,16,3,3,Yes
 138,Elizabeth,Ryan,Washington,Female,15,,3,Yes
 143,Sara,Collins,Minnesota,Female,18,3,3,Yes
 230,Lisa,Knight,Louisiana,Female,,4,3,Yes
 269,Amy,Schmidt,California,Female,16,,3,Yes
 278,Dennis,Baker,Ohio,Male,,,3,Yes
 302,Mark,Frazier,Kentucky,Male,,2,3,Yes
-316,Gloria,Hunter,California,,,2,3,Yes
+316,Gloria,Hunter,California,Female,,2,3,Yes
 374,Jessica,Jones,South Carolina,Female,17,2,3,Yes
 442,Willie,Owens,Washington,Male,16,4,3,Yes
 498,Kathryn,Jackson,,Female,16,,3,Yes
@@ -443,19 +443,19 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 599,Doris,Murray,,Female,17,4,3,Yes
 619,Fred,Sanchez,Michigan,Male,,3,3,Yes
 624,Larry,Wagner,New Jersey,Male,15,4,3,Yes
-638,Robin,Grant,Alabama,,,2,3,Yes
-654,Stephen,Simpson,New Jersey,,16,2,3,Yes
+638,Robin,Grant,Alabama,Female,,2,3,Yes
+654,Stephen,Simpson,New Jersey,Male,16,2,3,Yes
 712,Maria,Stevens,Colorado,Female,16,2,3,Yes
-739,Robert,Larson,Iowa,,18,,3,Yes
-797,Kelly,Lopez,Alaska,,,,3,Yes
+739,Robert,Larson,Iowa,Male,18,,3,Yes
+797,Kelly,Lopez,Alaska,Female,,,3,Yes
 807,Jean,Davis,California,Female,16,4,3,Yes
 861,Justin,Bennett,,Male,15,2,3,Yes
-979,Betty,Reid,Delaware,,15,3,3,Yes
+979,Betty,Reid,Delaware,Female,15,3,3,Yes
 22,Benjamin,Butler,Connecticut,Male,18,,4,Yes
-68,Patrick,Washington,Virginia,,,,4,Yes
+68,Patrick,Washington,Virginia,Male,,,4,Yes
 233,Alan,Gonzales,Georgia,Male,,4,4,Yes
 306,David,Thompson,Texas,Male,17,4,4,Yes
-328,Victor,Day,North Carolina,,16,,4,Yes
+328,Victor,Day,North Carolina,Male,16,,4,Yes
 372,Larry,Harper,,Male,17,4,4,Yes
 428,Timothy,Watkins,Nevada,Male,16,4,4,Yes
 563,Lawrence,Thompson,North Carolina,Male,16,,4,Yes
@@ -463,12 +463,12 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 809,Anthony,Ross,Washington,Male,19,4,4,Yes
 813,Amy,Ortiz,Oklahoma,Female,18,,4,Yes
 828,Ruth,Parker,South Carolina,Female,,4,4,Yes
-843,Cheryl,Harvey,,,,4,4,Yes
+843,Cheryl,Harvey,,Female,,4,4,Yes
 856,Jimmy,Bryant,Pennsylvania,Male,16,,4,Yes
-868,Ruby,Long,Minnesota,,,4,4,Yes
+868,Ruby,Long,Minnesota,Female,,4,4,Yes
 896,Amanda,Anderson,Nevada,Female,19,4,4,Yes
 938,Anthony,Ray,New York,Male,18,4,4,Yes
-945,Todd,Pierce,Missouri,,19,,4,Yes
+945,Todd,Pierce,Missouri,Male,19,,4,Yes
 6,Annie,Fisher,Virginia,Female,19,,5,Yes
 100,Emily,Bradley,,Female,17,,5,Yes
 208,Jesse,Little,Georgia,Male,16,,5,Yes
@@ -485,7 +485,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 357,Terry,Anderson,Washington,Male,18,4,6,Yes
 385,Judith,Ross,Oklahoma,Female,15,,6,Yes
 409,Julie,Richardson,Georgia,Female,19,,6,Yes
-418,Cheryl,Banks,Texas,,19,,6,Yes
+418,Cheryl,Banks,Texas,Female,19,,6,Yes
 488,Matthew,Knight,Maryland,Male,18,4,6,Yes
 539,Sean,Dean,New Jersey,Male,,4,6,Yes
 555,Albert,Perez,Virginia,Male,19,,6,Yes
@@ -499,7 +499,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 133,Joshua,Lynch,Connecticut,Male,18,,7,Yes
 145,Sara,Armstrong,Georgia,Female,16,,7,Yes
 147,Willie,Fisher,Ohio,Male,18,,7,Yes
-307,Wayne,Diaz,Virginia,,17,4,7,Yes
+307,Wayne,Diaz,Virginia,Male,17,4,7,Yes
 423,Daniel,Lee,,Male,16,4,7,Yes
 447,Robert,Brooks,Texas,Male,15,,7,Yes
 463,Lawrence,Lee,Florida,Male,,,7,Yes
@@ -511,12 +511,12 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 823,Dennis,Carpenter,Indiana,Male,17,,7,Yes
 911,Sarah,Perry,California,Female,,,7,Yes
 963,Teresa,Olson,Florida,Female,15,4,7,Yes
-47,Frank,Ortiz,Florida,,16,,8,Yes
+47,Frank,Ortiz,Florida,Male,16,,8,Yes
 215,Bonnie,Harris,Florida,Female,,,8,Yes
 282,Juan,Hunt,California,Male,18,,8,Yes
 386,Clarence,Nguyen,California,Male,17,,8,Yes
-464,Kimberly,Morgan,Illinois,,16,,8,Yes
-545,Thomas,Mcdonald,Texas,,17,4,8,Yes
+464,Kimberly,Morgan,Illinois,Female,16,,8,Yes
+545,Thomas,Mcdonald,Texas,Male,17,4,8,Yes
 686,Heather,Adams,Texas,Female,,,8,Yes
 733,Stephanie,Graham,Missouri,Female,17,,8,Yes
 769,Beverly,Burns,Virginia,Female,,4,8,Yes
@@ -526,11 +526,11 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 1,Wayne,Boyd,Florida,Male,19,,9,Yes
 338,Jerry,Hanson,,Male,15,4,9,Yes
 495,Frances,Cruz,Virginia,Female,16,4,9,Yes
-801,Justin,Clark,California,,,4,9,Yes
+801,Justin,Clark,California,Male,,4,9,Yes
 839,James,Myers,Illinois,Male,18,4,9,Yes
 880,Amanda,Reyes,District of Columbia,Female,15,,9,Yes
-919,Ralph,Perry,Texas,,15,4,9,Yes
-3,George,Matthews,Texas,,17,,10,Yes
+919,Ralph,Perry,Texas,Male,15,4,9,Yes
+3,George,Matthews,Texas,Male,17,,10,Yes
 42,Jimmy,Kelly,Louisiana,Male,,,10,Yes
 151,Shawn,Green,,Male,18,,10,Yes
 218,Terry,Rogers,Alabama,Male,17,4,10,Yes
@@ -549,14 +549,14 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 171,Annie,Oliver,District of Columbia,Female,18,,11,Yes
 178,Andrea,Fox,Texas,Female,,,11,Yes
 411,Kenneth,Johnston,Massachusetts,Male,19,4,11,Yes
-647,Phillip,Reid,,,15,4,11,Yes
-758,Steven,George,Oregon,,16,,11,Yes
+647,Phillip,Reid,,Male,15,4,11,Yes
+758,Steven,George,Oregon,Male,16,,11,Yes
 837,Randy,Mendoza,Ohio,Male,,,11,Yes
-923,Angela,Arnold,New Jersey,,15,4,11,Yes
-153,Evelyn,Watson,New Jersey,,18,4,12,Yes
+923,Angela,Arnold,New Jersey,Female,15,4,11,Yes
+153,Evelyn,Watson,New Jersey,Female,18,4,12,Yes
 236,Amy,Gomez,New York,Female,19,,12,Yes
 388,Aaron,Bishop,California,Male,17,4,12,Yes
-465,Patrick,Fields,Indiana,,15,,12,Yes
+465,Patrick,Fields,Indiana,Male,15,,12,Yes
 508,Scott,Johnson,Florida,Male,17,4,12,Yes
 662,Christina,Grant,Florida,Female,,,12,Yes
 729,Samuel,Allen,Illinois,Male,16,4,12,Yes
@@ -567,13 +567,13 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 103,Debra,Woods,,Female,19,4,13,Yes
 232,Harry,Holmes,South Carolina,Male,18,,13,Yes
 272,Laura,Watson,Louisiana,Female,19,,13,Yes
-367,Mary,Patterson,District of Columbia,,17,4,13,Yes
+367,Mary,Patterson,District of Columbia,Female,17,4,13,Yes
 369,David,Lynch,Arizona,Male,15,,13,Yes
 452,Walter,Meyer,,Male,16,,13,Yes
 489,Marie,Hawkins,North Carolina,Female,16,,13,Yes
-507,Christina,Schmidt,Texas,,19,,13,Yes
+507,Christina,Schmidt,Texas,Female,19,,13,Yes
 593,Bruce,Foster,,Male,19,4,13,Yes
-709,Harry,Williamson,Pennsylvania,,19,4,13,Yes
+709,Harry,Williamson,Pennsylvania,Male,19,4,13,Yes
 748,Eugene,Brooks,California,Male,16,4,13,Yes
 760,Annie,Hamilton,South Carolina,Female,15,,13,Yes
 10,Henry,Woods,Colorado,Male,19,4,14,Yes
@@ -589,18 +589,18 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 829,Juan,Collins,Vermont,Male,17,4,14,Yes
 855,Ruth,Carroll,Kentucky,Female,,,14,Yes
 866,John,Fields,,Male,,4,14,Yes
-887,Patricia,Hernandez,Arizona,,19,4,14,Yes
+887,Patricia,Hernandez,Arizona,Female,19,4,14,Yes
 991,Ruby,King,California,Female,18,4,14,Yes
 61,Joshua,Lewis,Missouri,Male,18,,15,Yes
 707,Robin,Ryan,,Female,15,4,15,Yes
-786,Judith,Alvarez,Michigan,,15,4,15,Yes
-54,Stephen,Bailey,Connecticut,,19,4,16,Yes
+786,Judith,Alvarez,Michigan,Female,15,4,15,Yes
+54,Stephen,Bailey,Connecticut,Male,19,4,16,Yes
 79,Johnny,Myers,Georgia,Male,,,16,Yes
 110,Janet,Johnson,Virginia,Female,17,,16,Yes
 149,Jason,Moreno,Virginia,Male,,4,16,Yes
-213,Mary,Oliver,,,18,,16,Yes
-528,Louis,Martin,District of Columbia,,18,,16,Yes
-534,Henry,Daniels,Massachusetts,,18,4,16,Yes
+213,Mary,Oliver,,Female,18,,16,Yes
+528,Louis,Martin,District of Columbia,Male,18,,16,Yes
+534,Henry,Daniels,Massachusetts,Male,18,4,16,Yes
 637,Jennifer,Lopez,,Female,16,4,16,Yes
 705,Martin,Holmes,Florida,Male,,4,16,Yes
 970,Susan,Nguyen,,Female,18,,16,Yes
@@ -612,35 +612,35 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 283,Brian,Gibson,California,Male,19,4,17,Yes
 410,Cynthia,Stanley,South Carolina,Female,15,4,17,Yes
 422,Robert,Flores,,Male,18,,17,Yes
-553,Kathleen,Ford,Florida,,18,4,17,Yes
-714,Bobby,Anderson,Pennsylvania,,,4,17,Yes
+553,Kathleen,Ford,Florida,Female,18,4,17,Yes
+714,Bobby,Anderson,Pennsylvania,Male,,4,17,Yes
 771,Ralph,Watkins,District of Columbia,Male,15,,17,Yes
-886,Susan,Spencer,Missouri,,19,4,17,Yes
-935,Anna,Stone,Texas,,18,4,17,Yes
+886,Susan,Spencer,Missouri,Female,19,4,17,Yes
+935,Anna,Stone,Texas,Female,18,4,17,Yes
 947,Randy,Myers,Delaware,Male,,,17,Yes
 20,Ann,Banks,Pennsylvania,Female,15,4,18,Yes
 44,Donna,Jackson,Ohio,Female,19,4,18,Yes
 85,Kenneth,Ramirez,,Male,19,,18,Yes
-177,Brandon,Carpenter,Florida,,15,,18,Yes
+177,Brandon,Carpenter,Florida,Male,15,,18,Yes
 207,Kathryn,Harris,Texas,Female,16,4,18,Yes
 317,Timothy,Gardner,,Male,18,4,18,Yes
-415,Carl,Mason,Indiana,,19,,18,Yes
+415,Carl,Mason,Indiana,Male,19,,18,Yes
 505,Ashley,Sims,Massachusetts,Female,18,4,18,Yes
-582,Anna,Pierce,Indiana,,17,,18,Yes
+582,Anna,Pierce,Indiana,Female,17,,18,Yes
 660,Theresa,Matthews,Hawaii,Female,,4,18,Yes
 754,Michelle,Gonzalez,Michigan,Female,17,4,18,Yes
 806,Adam,Chapman,Georgia,Male,,4,18,Yes
-70,Lois,Chavez,Minnesota,,17,4,19,Yes
+70,Lois,Chavez,Minnesota,Female,17,4,19,Yes
 86,Margaret,Scott,North Carolina,Female,15,,19,Yes
 130,Lillian,Perez,Colorado,Female,,4,19,Yes
-352,Nancy,Bryant,New York,,18,4,19,Yes
+352,Nancy,Bryant,New York,Female,18,4,19,Yes
 402,Richard,Alvarez,Pennsylvania,Male,16,4,19,Yes
 504,Doris,Ortiz,Washington,Female,17,4,19,Yes
 556,Teresa,Gomez,California,Female,15,4,19,Yes
 706,Debra,Morris,Ohio,Female,,,19,Yes
 787,Roy,Owens,Virginia,Male,,4,19,Yes
 830,Mary,Mason,Texas,Female,19,4,19,Yes
-917,Beverly,Tucker,Oklahoma,,19,,19,Yes
+917,Beverly,Tucker,Oklahoma,Female,19,,19,Yes
 8,Janet,Jenkins,Louisiana,Female,15,4,20,Yes
 17,Sandra,Hudson,,Female,,4,20,Yes
 29,Jonathan,Wells,Indiana,Male,19,,20,Yes
@@ -654,7 +654,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 906,Harry,Wells,Pennsylvania,Male,17,,20,Yes
 986,Jose,Jordan,Connecticut,Male,,4,20,Yes
 993,Arthur,Green,Oklahoma,Male,,4,20,Yes
-998,Jane,Rodriguez,Ohio,,17,,20,Yes
+998,Jane,Rodriguez,Ohio,Female,17,,20,Yes
 50,Christina,Little,Ohio,Female,15,,21,Yes
 118,Lillian,Frazier,Nebraska,Female,15,4,21,Yes
 127,Shawn,Grant,Florida,Male,15,,21,Yes
@@ -665,17 +665,17 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 567,Jesse,Ortiz,Tennessee,Male,,4,21,Yes
 581,Heather,Hawkins,District of Columbia,Female,16,,21,Yes
 695,Philip,Watkins,Arizona,Male,19,,21,Yes
-734,Roger,Snyder,Kansas,,18,4,21,Yes
+734,Roger,Snyder,Kansas,Male,18,4,21,Yes
 28,Joyce,Patterson,Virginia,Female,18,4,22,Yes
-344,Deborah,Reynolds,Virginia,,18,4,22,Yes
+344,Deborah,Reynolds,Virginia,Female,18,4,22,Yes
 434,Wanda,Weaver,New Jersey,Female,18,4,22,Yes
 552,Ryan,Johnston,Florida,Male,,4,22,Yes
 561,Arthur,Ryan,California,Male,18,,22,Yes
 573,Dennis,Ortiz,Iowa,Male,16,,22,Yes
 627,Nicholas,Washington,Indiana,Male,18,4,22,Yes
 731,Martha,Gordon,Illinois,Female,15,,22,Yes
-948,Maria,Marshall,Georgia,,18,4,22,Yes
-974,Phyllis,Smith,,,,4,22,Yes
+948,Maria,Marshall,Georgia,Female,18,4,22,Yes
+974,Phyllis,Smith,,Female,,4,22,Yes
 98,Lisa,Harper,Florida,Female,15,,23,Yes
 105,Jason,Wright,Virginia,Male,17,4,23,Yes
 256,Justin,Wheeler,California,Male,15,4,23,Yes
@@ -683,44 +683,44 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 348,Angela,Jordan,North Carolina,Female,15,,23,Yes
 665,Chris,Hunt,Pennsylvania,Male,,4,23,Yes
 838,Irene,Cole,Texas,Female,16,4,23,Yes
-844,Gloria,Ramos,Kansas,,16,4,23,Yes
+844,Gloria,Ramos,Kansas,Female,16,4,23,Yes
 21,Sara,Williams,,Female,17,,24,Yes
 201,Heather,Foster,,Female,15,4,24,Yes
-645,Sean,Nguyen,Texas,,19,,24,Yes
+645,Sean,Nguyen,Texas,Male,19,,24,Yes
 658,Melissa,Harrison,Texas,Female,,4,24,Yes
-666,Mildred,Ross,West Virginia,,18,,24,Yes
-685,Annie,Kennedy,Nevada,,,4,24,Yes
+666,Mildred,Ross,West Virginia,Female,18,,24,Yes
+685,Annie,Kennedy,Nevada,Female,,4,24,Yes
 841,Andrea,Duncan,Ohio,Female,18,4,24,Yes
 897,Kathleen,Lane,Indiana,Female,19,4,24,Yes
 940,Kenneth,Evans,Indiana,Male,15,4,24,Yes
 142,Lori,Alvarez,Tennessee,Female,15,4,25,Yes
 190,Diane,Collins,Louisiana,Female,17,4,25,Yes
-308,Lawrence,Bradley,West Virginia,,19,4,25,Yes
+308,Lawrence,Bradley,West Virginia,Male,19,4,25,Yes
 342,Debra,Arnold,Florida,Female,17,,25,Yes
 343,Judith,Cunningham,California,Female,15,4,25,Yes
 364,Christopher,Torres,Pennsylvania,Male,18,4,25,Yes
-533,Emily,Hamilton,Ohio,,16,4,25,Yes
-558,Louise,James,Kentucky,,16,,25,Yes
-668,John,Richards,Texas,,,4,25,Yes
-693,Sharon,Romero,North Carolina,,17,,25,Yes
+533,Emily,Hamilton,Ohio,Female,16,4,25,Yes
+558,Louise,James,Kentucky,Female,16,,25,Yes
+668,John,Richards,Texas,Male,,4,25,Yes
+693,Sharon,Romero,North Carolina,Female,17,,25,Yes
 704,Chris,Little,Michigan,Male,16,,25,Yes
 996,Frank,Stone,Louisiana,Male,16,4,25,Yes
 115,Daniel,Jacobs,Missouri,Male,15,4,26,Yes
 511,Nancy,Palmer,New Jersey,Female,,,26,Yes
-522,Doris,Collins,Ohio,,19,,26,Yes
+522,Doris,Collins,Ohio,Female,19,,26,Yes
 592,Arthur,Miller,Louisiana,Male,,,26,Yes
 609,Rachel,Barnes,Alabama,Female,19,,26,Yes
 702,Michael,Shaw,Florida,Male,18,,26,Yes
-824,Patrick,Ross,Texas,,17,4,26,Yes
+824,Patrick,Ross,Texas,Male,17,4,26,Yes
 346,Angela,Sanchez,Nevada,Female,19,4,27,Yes
-365,Richard,Martin,,,17,,27,Yes
+365,Richard,Martin,,Male,17,,27,Yes
 525,Patrick,Harvey,Minnesota,Male,15,,27,Yes
 589,Carol,Hernandez,Minnesota,Female,19,,27,Yes
-612,Karen,Torres,Florida,,17,4,27,Yes
+612,Karen,Torres,Florida,Female,17,4,27,Yes
 617,Bobby,Hill,Florida,Male,,4,27,Yes
 752,Joyce,Matthews,New York,Female,,4,27,Yes
-794,Rose,Ward,Texas,,19,4,27,Yes
-850,Marie,Wood,Michigan,,,,27,Yes
+794,Rose,Ward,Texas,Female,19,4,27,Yes
+850,Marie,Wood,Michigan,Female,,,27,Yes
 869,Phyllis,Oliver,Michigan,Female,17,4,27,Yes
 109,Carlos,Gibson,Connecticut,Male,15,4,28,Yes
 223,Gary,Nichols,Florida,Male,17,,28,Yes
@@ -729,13 +729,13 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 634,Amanda,Fisher,Indiana,Female,,,28,Yes
 636,Lois,Hayes,Wisconsin,Female,,4,28,Yes
 741,Karen,Turner,Missouri,Female,16,4,28,Yes
-755,Jessica,Elliott,Minnesota,,,4,28,Yes
+755,Jessica,Elliott,Minnesota,Female,,4,28,Yes
 882,Kevin,Campbell,California,Male,17,4,28,Yes
 96,Justin,Gardner,Nebraska,Male,,,29,Yes
 266,Carl,Montgomery,,Male,,4,29,Yes
-322,Catherine,Hanson,Virginia,,18,4,29,Yes
-399,Tammy,Fields,Tennessee,,18,4,29,Yes
-403,Jeffrey,Miller,Oregon,,19,4,29,Yes
+322,Catherine,Hanson,Virginia,Female,18,4,29,Yes
+399,Tammy,Fields,Tennessee,Female,18,4,29,Yes
+403,Jeffrey,Miller,Oregon,Male,19,4,29,Yes
 421,Sean,Perez,California,Male,15,4,29,Yes
 572,Betty,Anderson,Alabama,Female,17,,29,Yes
 652,Antonio,Taylor,District of Columbia,Male,17,4,29,Yes
@@ -746,34 +746,34 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 158,Raymond,Davis,New Mexico,Male,,,30,Yes
 237,Patrick,Willis,Illinois,Male,17,,30,Yes
 276,Denise,Garza,North Carolina,Female,15,,30,Yes
-280,Melissa,Morales,District of Columbia,,19,,30,Yes
+280,Melissa,Morales,District of Columbia,Female,19,,30,Yes
 319,Cynthia,Brown,Arizona,Female,,,30,Yes
 384,Teresa,Roberts,Illinois,Female,16,,30,Yes
 419,Frances,Marshall,Texas,Female,19,,30,Yes
-426,Julia,Bishop,Ohio,,19,,30,Yes
+426,Julia,Bishop,Ohio,Female,19,,30,Yes
 437,Debra,Fernandez,New York,Female,16,,30,Yes
-486,Andrew,Day,Alabama,,,,30,Yes
+486,Andrew,Day,Alabama,Male,,,30,Yes
 499,Mary,Young,Pennsylvania,Female,15,,30,Yes
-521,Virginia,Reed,Wisconsin,,18,,30,Yes
+521,Virginia,Reed,Wisconsin,Female,18,,30,Yes
 578,Michelle,Moore,,Female,16,,30,Yes
-605,James,Lane,Arizona,,15,,30,Yes
+605,James,Lane,Arizona,Male,15,,30,Yes
 618,Debra,Robinson,Oregon,Female,17,4,30,Yes
-622,Antonio,Crawford,West Virginia,,19,,30,Yes
+622,Antonio,Crawford,West Virginia,Male,19,,30,Yes
 710,Russell,Anderson,District of Columbia,Male,17,4,30,Yes
 980,Ruby,Diaz,Ohio,Female,15,4,30,Yes
 55,Harold,Powell,Tennessee,Male,,,31,Yes
 92,Lois,Hanson,Washington,Female,19,4,31,Yes
-94,Jack,Williamson,Florida,,16,4,31,Yes
-181,John,Bailey,Virginia,,17,,31,Yes
+94,Jack,Williamson,Florida,Male,16,4,31,Yes
+181,John,Bailey,Virginia,Male,17,,31,Yes
 327,Randy,Mason,Virginia,Male,,4,31,Yes
 663,Carol,Powell,Illinois,Female,,4,31,Yes
-698,Daniel,Bowman,Kentucky,,16,4,31,Yes
+698,Daniel,Bowman,Kentucky,Male,16,4,31,Yes
 765,Lois,Peters,Pennsylvania,Female,19,4,31,Yes
 811,Jacqueline,Cunningham,Hawaii,Female,,4,31,Yes
 827,Amy,Miller,,Female,18,,31,Yes
 890,Deborah,Franklin,,Female,16,4,31,Yes
 916,Debra,Warren,Texas,Female,15,4,31,Yes
-920,Patricia,Ellis,Florida,,,4,31,Yes
+920,Patricia,Ellis,Florida,Female,,4,31,Yes
 992,Deborah,King,New York,Female,19,4,31,Yes
 35,Arthur,Campbell,Texas,Male,,,32,Yes
 72,Eric,Roberts,California,Male,18,,32,Yes
@@ -787,30 +787,30 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 859,Angela,Kelly,Connecticut,Female,15,4,32,Yes
 45,Judy,Boyd,Louisiana,Female,18,,33,Yes
 57,Marilyn,Simmons,South Carolina,Female,18,4,33,Yes
-162,Brandon,Bryant,Delaware,,,,33,Yes
+162,Brandon,Bryant,Delaware,Male,,,33,Yes
 238,Carlos,Wallace,South Carolina,Male,,,33,Yes
 260,Andrea,Warren,Florida,Female,18,,33,Yes
-262,Amanda,Reyes,Texas,,17,4,33,Yes
-315,Jacqueline,Gomez,,,16,,33,Yes
+262,Amanda,Reyes,Texas,Female,17,4,33,Yes
+315,Jacqueline,Gomez,,Female,16,,33,Yes
 725,Howard,Lawrence,New York,Male,19,4,33,Yes
-745,Anne,Butler,California,,17,,33,Yes
+745,Anne,Butler,California,Female,17,,33,Yes
 954,Tammy,Parker,Connecticut,Female,19,,33,Yes
 199,Jeremy,Dixon,Virginia,Male,15,,34,Yes
-240,Gloria,Brooks,Texas,,16,4,34,Yes
+240,Gloria,Brooks,Texas,Female,16,4,34,Yes
 395,Philip,Nichols,District of Columbia,Male,19,,34,Yes
 398,Roy,Garcia,Michigan,Male,15,,34,Yes
 443,Katherine,Fields,,Female,17,4,34,Yes
-526,Kelly,Franklin,,,16,4,34,Yes
-586,Robert,Patterson,Utah,,16,,34,Yes
-661,Sarah,Crawford,Virginia,,19,,34,Yes
-672,Terry,Gray,Colorado,,,,34,Yes
+526,Kelly,Franklin,,Female,16,4,34,Yes
+586,Robert,Patterson,Utah,Male,16,,34,Yes
+661,Sarah,Crawford,Virginia,Female,19,,34,Yes
+672,Terry,Gray,Colorado,Male,,,34,Yes
 749,Melissa,King,Virginia,Female,18,,34,Yes
 777,Louise,Lane,Pennsylvania,Female,17,4,34,Yes
-989,Harry,Carr,Nebraska,,16,,34,Yes
+989,Harry,Carr,Nebraska,Male,16,,34,Yes
 2,Ann,Matthews,Pennsylvania,Female,18,3,,Yes
 36,Harold,Flores,New Mexico,Male,19,,,Yes
 39,Anna,Bradley,Virginia,Female,19,4,,Yes
-40,Ruth,Lopez,Ohio,,16,4,,Yes
+40,Ruth,Lopez,Ohio,Female,16,4,,Yes
 43,Marilyn,Marshall,New York,Female,,,,Yes
 51,Diana,Ross,Texas,Female,,2,,Yes
 52,William,Cooper,New York,Male,18,2,,Yes
@@ -820,14 +820,14 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 82,Keith,Sanchez,New York,Male,15,2,,Yes
 87,Martha,Moreno,Kentucky,Female,19,2,,Yes
 97,Edward,Hughes,California,Male,18,2,,Yes
-101,Diana,Evans,Texas,,,3,,Yes
+101,Diana,Evans,Texas,Female,,3,,Yes
 104,Donna,Cooper,Florida,Female,15,,,Yes
 108,Debra,Larson,Virginia,Female,17,4,,Yes
 111,Kathryn,Welch,Colorado,Female,15,4,,Yes
 114,Nancy,Olson,Illinois,Female,15,,,Yes
 126,Janice,Watson,,Female,18,3,,Yes
-132,Andrew,Meyer,,,17,2,,Yes
-135,Bruce,Williamson,Minnesota,,17,,,Yes
+132,Andrew,Meyer,,Male,17,2,,Yes
+135,Bruce,Williamson,Minnesota,Male,17,,,Yes
 144,Nicholas,Graham,Georgia,Male,18,4,,Yes
 150,Rose,Brooks,District of Columbia,Female,15,4,,Yes
 155,Clarence,Baker,New York,Male,19,2,,Yes
@@ -837,7 +837,7 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 176,Larry,Ross,Tennessee,Male,17,4,,Yes
 179,Victor,Ferguson,California,Male,18,4,,Yes
 182,Eric,Hill,Georgia,Male,15,4,,Yes
-184,Patricia,Welch,Nevada,,,3,,Yes
+184,Patricia,Welch,Nevada,Female,,3,,Yes
 188,Walter,Brown,District of Columbia,Male,15,2,,Yes
 191,Irene,Warren,Kansas,Female,17,3,,Yes
 192,Janet,Gibson,Tennessee,Female,19,4,,Yes
@@ -850,17 +850,17 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 225,Catherine,Barnes,Pennsylvania,Female,,,,Yes
 235,Juan,Ross,Florida,Male,19,2,,Yes
 243,Andrew,Lopez,Connecticut,Male,,,,Yes
-247,Victor,Palmer,Idaho,,15,3,,Yes
+247,Victor,Palmer,Idaho,Male,15,3,,Yes
 248,Phillip,Gonzalez,District of Columbia,Male,15,,,Yes
 252,Philip,Stone,California,Male,,4,,Yes
 253,Frank,Vasquez,California,Male,15,4,,Yes
 263,Richard,Collins,Kentucky,Male,18,2,,Yes
 264,Kenneth,Olson,Illinois,Male,19,,,Yes
-270,Patricia,Hawkins,California,,16,,,Yes
+270,Patricia,Hawkins,California,Female,16,,,Yes
 273,Nicholas,Morgan,Minnesota,Male,18,,,Yes
 275,Raymond,Shaw,Oregon,Male,19,2,,Yes
 291,Matthew,Sullivan,Texas,Male,16,2,,Yes
-292,Joseph,Kelley,,,,3,,Yes
+292,Joseph,Kelley,,Male,,3,,Yes
 293,Anthony,Roberts,Colorado,Male,17,2,,Yes
 296,Julia,Carr,Texas,Female,17,4,,Yes
 298,Marie,Ford,Florida,Female,,3,,Yes
@@ -870,33 +870,33 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 314,Anthony,Hart,Indiana,Male,18,4,,Yes
 320,Nicholas,Campbell,North Carolina,Male,16,4,,Yes
 321,Steve,Garcia,Vermont,Male,17,3,,Yes
-330,Gary,Medina,Michigan,,15,3,,Yes
+330,Gary,Medina,Michigan,Male,15,3,,Yes
 331,Donna,Torres,New York,Female,17,,,Yes
 337,Annie,Morgan,Texas,Female,16,2,,Yes
 345,Theresa,Garza,,Female,15,,,Yes
 353,Anna,Stephens,,Female,16,4,,Yes
 361,Steven,Hansen,Wisconsin,Male,18,,,Yes
 363,Marie,Rice,Washington,Female,18,4,,Yes
-368,Ann,Davis,California,,16,2,,Yes
-375,Juan,Hernandez,Arizona,,16,3,,Yes
+368,Ann,Davis,California,Female,16,2,,Yes
+375,Juan,Hernandez,Arizona,Male,16,3,,Yes
 376,Antonio,Hart,California,Male,18,4,,Yes
-377,Janice,Ellis,New Jersey,,18,3,,Yes
+377,Janice,Ellis,New Jersey,Female,18,3,,Yes
 381,Wanda,Edwards,District of Columbia,Female,15,,,Yes
 387,Lois,Collins,,Female,,3,,Yes
 389,James,Fields,Virginia,Male,19,2,,Yes
 392,Russell,Cook,New York,Male,,2,,Yes
-393,Kathleen,Burton,Missouri,,17,,,Yes
+393,Kathleen,Burton,Missouri,Female,17,,,Yes
 394,Willie,Shaw,Texas,Male,16,2,,Yes
 401,David,Ramirez,California,Male,17,2,,Yes
-416,Richard,Wells,Texas,,,2,,Yes
+416,Richard,Wells,Texas,Male,,2,,Yes
 417,Sandra,Daniels,Nebraska,Female,18,3,,Yes
 420,Gerald,Stevens,Florida,Male,19,4,,Yes
-429,James,Olson,Louisiana,,15,2,,Yes
+429,James,Olson,Louisiana,Male,15,2,,Yes
 430,Gregory,Ramos,,Male,16,3,,Yes
-461,Judith,Wright,Florida,,18,,,Yes
+461,Judith,Wright,Florida,Female,18,,,Yes
 467,Nancy,Adams,Missouri,Female,17,3,,Yes
 468,Virginia,Brown,Florida,Female,15,,,Yes
-469,Mary,Bradley,California,,19,4,,Yes
+469,Mary,Bradley,California,Female,19,4,,Yes
 473,Judy,Phillips,Florida,Female,19,4,,Yes
 474,Pamela,Kennedy,Indiana,Female,16,,,Yes
 478,Mary,Miller,Nebraska,Female,15,3,,Yes
@@ -910,50 +910,50 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 523,Larry,Fernandez,Colorado,Male,,4,,Yes
 540,Janice,Gilbert,Texas,Female,15,2,,Yes
 542,Debra,Meyer,Alabama,Female,,2,,Yes
-546,David,Hart,Indiana,,17,3,,Yes
+546,David,Hart,Indiana,Male,17,3,,Yes
 550,Jesse,Henry,Michigan,Male,17,,,Yes
 564,Roy,Stevens,Oklahoma,Male,15,2,,Yes
-566,Shawn,Torres,,,19,4,,Yes
+566,Shawn,Torres,,Male,19,4,,Yes
 574,Larry,Graham,Virginia,Male,18,3,,Yes
 585,Bruce,Perez,Texas,Male,15,2,,Yes
 591,Mark,Nguyen,Arkansas,Male,,2,,Yes
 596,Earl,Bennett,Texas,Male,,,,Yes
 597,Carlos,Gray,Virginia,Male,,4,,Yes
-598,Janet,Franklin,Florida,,,3,,Yes
-606,Theresa,Simpson,District of Columbia,,18,2,,Yes
+598,Janet,Franklin,Florida,Female,,3,,Yes
+606,Theresa,Simpson,District of Columbia,Female,18,2,,Yes
 607,Elizabeth,Miller,Colorado,Female,16,3,,Yes
 614,Jeremy,Rose,California,Male,17,2,,Yes
 615,Johnny,Berry,Texas,Male,15,2,,Yes
 620,Johnny,Wood,,Male,18,4,,Yes
 630,Antonio,King,Michigan,Male,17,,,Yes
-632,Rachel,Collins,Texas,,19,4,,Yes
-641,Arthur,Sanchez,Georgia,,16,4,,Yes
+632,Rachel,Collins,Texas,Female,19,4,,Yes
+641,Arthur,Sanchez,Georgia,Male,16,4,,Yes
 644,Nicole,Ortiz,Illinois,Female,18,2,,Yes
 648,Billy,Morrison,Minnesota,Male,19,,,Yes
 650,Shirley,Ortiz,,Female,18,2,,Yes
 653,Janice,Clark,West Virginia,Female,,2,,Yes
 667,Nicole,Hart,Texas,Female,,2,,Yes
 674,Donna,Russell,Ohio,Female,,4,,Yes
-676,Jack,Morrison,Alabama,,,2,,Yes
+676,Jack,Morrison,Alabama,Male,,2,,Yes
 677,Louis,Rodriguez,Pennsylvania,Male,16,3,,Yes
 678,Gregory,Mccoy,Washington,Male,18,2,,Yes
-688,Fred,Gonzalez,Idaho,,17,4,,Yes
-696,Henry,King,District of Columbia,,,2,,Yes
+688,Fred,Gonzalez,Idaho,Male,17,4,,Yes
+696,Henry,King,District of Columbia,Male,,2,,Yes
 700,Kathryn,Medina,Texas,Female,19,2,,Yes
-713,David,Riley,New York,,18,,,Yes
-716,Ann,Coleman,Washington,,17,2,,Yes
+713,David,Riley,New York,Male,18,,,Yes
+716,Ann,Coleman,Washington,Female,17,2,,Yes
 718,Gloria,Hughes,Ohio,Female,19,2,,Yes
 724,Phillip,Alvarez,Illinois,Male,16,2,,Yes
 726,Stephanie,Johnson,Pennsylvania,Female,18,,,Yes
 732,Katherine,Fox,,Female,17,4,,Yes
 737,Philip,Perkins,Florida,Male,,4,,Yes
 747,Patrick,Brooks,California,Male,19,3,,Yes
-750,Margaret,Black,New York,,18,4,,Yes
+750,Margaret,Black,New York,Female,18,4,,Yes
 764,Diane,Freeman,,Female,,2,,Yes
-766,Brenda,Martin,Texas,,16,,,Yes
+766,Brenda,Martin,Texas,Female,16,,,Yes
 767,Christina,Daniels,Virginia,Female,19,,,Yes
 772,Gerald,James,Tennessee,Male,17,2,,Yes
-780,Kimberly,Gordon,Minnesota,,15,,,Yes
+780,Kimberly,Gordon,Minnesota,Female,15,,,Yes
 788,Doris,Long,Illinois,Female,16,4,,Yes
 789,Diana,Hill,Missouri,Female,19,,,Yes
 793,Ryan,Walker,Massachusetts,Male,16,,,Yes
@@ -966,14 +966,14 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 834,Louis,Riley,Utah,Male,,4,,Yes
 846,Alan,Crawford,California,Male,17,4,,Yes
 848,Laura,Mitchell,Colorado,Female,18,4,,Yes
-852,Gloria,Edwards,California,,18,4,,Yes
+852,Gloria,Edwards,California,Female,18,4,,Yes
 853,Kathy,Bailey,New York,Female,19,3,,Yes
 854,Heather,Owens,,Female,15,,,Yes
 863,Pamela,Hudson,,Female,16,,,Yes
 871,Joshua,Butler,,Male,18,4,,Yes
 874,Diana,Howard,Minnesota,Female,15,,,Yes
 875,Joe,Hicks,Florida,Male,15,3,,Yes
-879,Victor,Kelley,California,,17,3,,Yes
+879,Victor,Kelley,California,Male,17,3,,Yes
 889,Mark,Parker,New York,Male,,4,,Yes
 892,Ruth,Larson,Washington,Female,18,4,,Yes
 898,Andrew,Murphy,Minnesota,Male,16,2,,Yes
@@ -984,18 +984,18 @@ ID,First_name,Last_name,State,Gender,Age,GPA,Days_missed,Graduated
 926,Raymond,Hunt,,Male,15,2,,Yes
 929,Alan,Davis,Wisconsin,Male,17,,,Yes
 930,Cheryl,Spencer,Michigan,Female,,2,,Yes
-936,Roger,Thompson,Virginia,,18,2,,Yes
+936,Roger,Thompson,Virginia,Male,18,2,,Yes
 942,Andrea,Sanchez,Florida,Female,,,,Yes
 943,Joan,Fox,Virginia,Female,15,2,,Yes
 946,Dennis,Lopez,Georgia,Male,,,,Yes
 949,Susan,Gonzales,California,Female,19,3,,Yes
 953,Jerry,Hanson,Texas,Male,18,2,,Yes
 958,Jacqueline,Day,Illinois,Female,18,,,Yes
-968,Teresa,Fisher,North Carolina,,,4,,Yes
+968,Teresa,Fisher,North Carolina,Female,,4,,Yes
 973,Jeffrey,Mason,Georgia,Male,,4,,Yes
 976,Jessica,Wheeler,California,Female,,2,,Yes
 983,Laura,Nelson,,Female,17,2,,Yes
-988,Gloria,Ross,Missouri,,,4,,Yes
-995,Ralph,Lopez,District of Columbia,,16,4,,Yes
+988,Gloria,Ross,Missouri,Female,,4,,Yes
+995,Ralph,Lopez,District of Columbia,Male,16,4,,Yes
 997,Shirley,Garrett,Minnesota,Female,15,4,,Yes
 999,Robin,George,California,Female,19,,,Yes
