@@ -1,0 +1,95 @@
+Summary Statistics
+
+NumberOfOpenCreditLinesAndLoans
+Missing Values: 0
+Mode: 6, Count: 13614
+Mean: 8.45276
+Median: 8.0
+Std Dev: 5.14593383644
+Conditional No Mean: 8.49362024376
+Conditional Yes Mean: 7.88230600439
+
+NumberRealEstateLoansOrLines
+Missing Values: 0
+Mode: 0, Count: 56188
+Mean: 1.01824
+Median: 1.0
+Std Dev: 1.12976721897
+Conditional No Mean: 1.02036806836
+Conditional Yes Mean: 0.988529822462
+
+age
+Missing Values: 0
+Mode: 49, Count: 3837
+Mean: 52.2952066667
+Median: 52.0
+Std Dev: 14.7718166235
+Conditional No Mean: 52.7513752554
+Conditional Yes Mean: 45.9265908638
+
+DebtRatio
+Missing Values: 0
+Mode: 0, Count: 4113
+Mean: 353.005075764
+Median: 0.366507841
+Std Dev: 2037.8117304
+Conditional No Mean: 357.151167739
+Conditional Yes Mean: 295.12106638
+
+NumberOfDependents
+Missing Values: 3924
+Mode: 0, Count: 86902
+Mean: 0.757222267861
+Median: 0.0
+Std Dev: 1.11508225468
+Conditional No Mean: 0.743417334048
+Conditional Yes Mean: 0.948207575911
+
+MonthlyIncome
+Missing Values: 29731
+Mode: 5000, Count: 2757
+Mean: 6670.22123739
+Median: 5400.0
+Std Dev: 14384.6144131
+Conditional No Mean: 6747.83777432
+Conditional Yes Mean: 5630.82649276
+
+SeriousDlqin2yrs
+Missing Values: 0
+Mode: 0, Count: 139974
+
+RevolvingUtilizationOfUnsecuredLines
+Missing Values: 0
+Mode: 0, Count: 10878
+Mean: 6.04843805467
+Median: 0.154180737
+Std Dev: 249.754538106
+Conditional No Mean: 6.16885522615
+Conditional Yes Mean: 4.367281745
+
+NumberOfTimes90DaysLate
+Missing Values: 0
+Mode: 0, Count: 141662
+Mean: 0.265973333333
+Median: 0.0
+Std Dev: 4.16928988989
+Conditional No Mean: 0.135225113235
+Conditional Yes Mean: 2.09136245761
+
+NumberOfTime60-89DaysPastDueNotWorse
+Missing Values: 0
+Mode: 0, Count: 142396
+Mean: 0.240386666667
+Median: 0.0
+Std Dev: 4.15516557037
+Conditional No Mean: 0.126666380899
+Conditional Yes Mean: 1.8280470776
+
+NumberOfTime30-59DaysPastDueNotWorse
+Missing Values: 0
+Mode: 0, Count: 126018
+Mean: 0.421033333333
+Median: 0.0
+Std Dev: 4.19276729606
+Conditional No Mean: 0.28010916313
+Conditional Yes Mean: 2.38848992619
