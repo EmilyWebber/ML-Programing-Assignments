@@ -1,6 +1,7 @@
 import csv
 import numpy as np
 import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 
 NO = "0"
 YES = "1"
@@ -9,9 +10,9 @@ YES = "1"
 switch global variable TRANSFORM to True
 this saves the data quality pie chart saved in Output '''
 
-READ_FILE = "Output/conditional_transformed.csv"
-# READ_FILE = "Data/cs-training.csv"
-TRANSFORM = True
+# READ_FILE = "Output/conditional_transformed.csv"
+READ_FILE = "Data/cs-training.csv"
+TRANSFORM = False
 
 WRITE_TEXT = "Output/Summary-Statistics.txt"
 MISSING = 'NA'
