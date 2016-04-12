@@ -2,12 +2,44 @@ import csv
 import numpy as np
 import matplotlib.pyplot as plt
 
-READ_FILE = "Data/cs-training.csv"
+NO = "0"
+YES = "1"
+
+''' if you change the read file to the set that's already transformed,
+switch global variable TRANSFORM to True
+this saves the data quality pie chart saved in Output '''
+
+READ_FILE = "Output/conditional_transformed.csv"
+# READ_FILE = "Data/cs-training.csv"
+TRANSFORM = True
+
 WRITE_TEXT = "Output/Summary-Statistics.txt"
 MISSING = 'NA'
 NUMERICAL = [2,3,4,5,6,7,8,9,10,11]
 CLASS_ID = 1
 HISTOGRAM = [1]
+
+def graph_data_quality(counts, conditional, maps):
+	'''
+	Takes two counting dictionaries and the maps dictionary,
+	Graphs the target classifications against missing values
+	To get some perspective on how much we're relying on the data being
+	Not a mistake
+	'''
+	fig = plt.figure()
+	d = counts[maps[CLASS_ID]]
+	fracs = [d[YES], d[NO]]
+	labels = [YES, NO]
+
+	for each in list(counts.keys()):
+		if MISSING in counts[each]:
+			fracs.append(counts[each][MISSING])
+			labels.append(each)
+
+	plt.pie(fracs, labels=labels)
+	plt.title("Comparision of target counts to missing values \n Or Data Quality")
+	if not TRANSFORM:
+		fig.savefig("Output/Images/DataQuality.png")
 
 def get_initial_dicts(row):
 	'''
@@ -83,6 +115,7 @@ def missing(each, counts, f):
 	else:
 		f.write("\nMissing Values: 0")
 
+# have to do this tonight
 def graph_distribution():
 	return
 
@@ -131,15 +164,51 @@ def summary(counts, maps, numerical, conditional):
 			f.write("\nMode: {}, Count: {}".format(mode_str, mode))
 
 			if maps[each] in NUMERICAL:
-				f.write("\nMean: {}".format(np.mean(numerical[each])))
-				f.write("\nMedian: {}".format(np.median(numerical[each])))
-				f.write("\nStd Dev: {}".format(np.std(numerical[each])))
-				f.write("\nConditional No Mean: {}".format(np.mean(conditional[each]["0"])))
-				f.write("\nConditional Yes Mean: {}".format(np.mean(conditional[each]["1"])))
-				graph_distribution()
+				write_logic(f, numerical, conditional, each)
+			graph_distribution()
 
 			if maps[each] in HISTOGRAM:
 				graph_hist(each, counts[each])
+
+		find_correlations(numerical, f)
+		graph_data_quality(counts, conditional, maps)
+
+def write_logic(f, numerical, conditional, each):
+	'''
+	Takes file pointer object, two dictionaries, and a key,
+	Writes to file f based on the key
+	'''
+	f.write("\nMin: {}".format(min(numerical[each])))
+	f.write("\nMax: {}".format(max(numerical[each])))
+	f.write("\nMean: {}".format(np.mean(numerical[each])))
+	f.write("\nMedian: {}".format(np.median(numerical[each])))
+	f.write("\nStd Dev: {}".format(np.std(numerical[each])))
+	f.write("\nConditional No Mean: {}".format(np.mean(conditional[each][NO])))
+	f.write("\nCond. Yes Mean: {}".format(np.mean(conditional[each][YES])))
+	f.write("\nCond. No Min: {}".format(min(conditional[each][NO])))
+	f.write("\nCond. Yes Min: {}".format(min(conditional[each][YES])))
+	f.write("\nCond. No Max :{}".format(max(conditional[each][NO])))
+	f.write("\nCond. Yes Max :{}".format(max(conditional[each][YES])))
+
+# want to also get t-values here for each bivariate correlation
+# then do multivariate correlations of each against all the others, plus t_values
+def find_correlations(numerical, f):
+	'''
+	Takes dict of numerical values and pointer to write file
+	Writes correlations of each variable against the other
+	'''
+	f.write("\n")
+	f.write("\nCross-Variable Correlations")
+	for each in list(numerical.keys()):
+		f.write("\n")
+		f.write("\n   {}".format(each))
+		for k in list(numerical.keys()):
+			if (k != each):
+				try:
+					beta = np.corrcoef(numerical[each], numerical[k])[1][0]
+					f.write("\n     - {}: {}".format(k, beta))
+				except:
+					pass
 
 if __name__ == "__main__":
 	counts, maps, numerical, conditional = read()

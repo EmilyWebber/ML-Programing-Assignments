@@ -1,8 +1,8 @@
 import csv
 
-READ_FILE = "Data/cs-training.csv"
-WRITE_MEAN = "Output/mean_transformed.csv"
-WRITE_CONDITIONAL = "Output/conditional_transformed.csv"
+READ_FILE = "Data/cs-test.csv"
+WRITE_MEAN = "Output/mean_transformed_test.csv"
+WRITE_CONDITIONAL = "Output/conditional_transformed_test.csv"
 
 # how should we handle imputing values into a discrete variable when the mean is not discrete?
 MEAN = {11:1, 6:6670}
@@ -27,7 +27,7 @@ def process_csv_readers(a, b, c):
 	c_write.writerow(h)
 	return fields, b_write, c_write
 
-def transform_means():
+def transform_means(conditional = True):
 	'''
 	Reads global csv file, grabs gender for missing values, writes to a new csv
 	'''
@@ -42,10 +42,12 @@ def transform_means():
 					copy[i] = MEAN[i]
 			b_write.writerow(copy)
 
-			for i in COL_ID:
-				if row[i] == MISSING:
-					row[i] = COND_MEAN[i][row[CLASS_ID]]
-			c_write.writerow(row)
+			if conditional:
+
+				for i in COL_ID:
+					if row[i] == MISSING:
+						row[i] = COND_MEAN[i][row[CLASS_ID]]
+				c_write.writerow(row)
 
 if __name__ == "__main__":
-	transform_means()
+	transform_means(False)
