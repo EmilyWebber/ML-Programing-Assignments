@@ -8,8 +8,10 @@ From the description on Kaggle
 
 # Contents Description
 
-summary.py - used to generate summary statistics and graphs
+summary.py - Generates summary statistics, graphs, and files.
 
-transform_means.py - used to impute missing data
+transform_means.py - Imputes missing data into csv file.
 
-features.py - used to make initial assesments of features and how we might alter them
+features.py - Generates graphs of features: scatter plots and comparisons of each with the target class. 
+
+model.py - Builds one or more classifiers 
