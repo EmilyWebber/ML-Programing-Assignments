@@ -2,4 +2,4 @@ Classifiers Summary
 
 Testing Classifier: LogisticRegression(C=1.0, class_weight=None, dual=False, fit_intercept=True,
           intercept_scaling=1, penalty='l2', random_state=None, tol=0.0001)
-      Accuracy at: 0.934113333333
+      Accuracy at: 0.934093333333

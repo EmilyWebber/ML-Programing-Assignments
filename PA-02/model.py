@@ -7,13 +7,7 @@ from sklearn import metrics
 import features
 
 WRITE = "Output/Model-Summary.txt"
-
 TARGET = "SeriousDlqin2yrs"
-
-def configure_and_split(train, test):
-	# train, test, features = features.pull_final_version()
-	features = get_headers(train)
-	return train, test, features
 
 def get_train_test(configure = False):
 	'''
@@ -21,9 +15,7 @@ def get_train_test(configure = False):
 	'''
 	train = pd.read_csv("Output/conditional_transformed.csv")
 	test = pd.read_csv("Output/mean_transformed_test.csv")
-	if configure:
-		return configure_and_split(train, test)
-	return train, test
+	return train, test, get_headers(train)
 
 def get_headers(train):
 	return list(train.columns.values)[2:]
@@ -41,14 +33,11 @@ def test_classifiers(train, test, features):
 		for clf in classifiers:
 			f.write("\nTesting Classifier: {}".format(clf))
 			clf.fit(train[features], train[TARGET])
-
 			probabilities = clf.predict_proba(test[features])
-
 			predictions = clf.predict(train[features])
-
 			accuracy = metrics.accuracy_score(train[TARGET], predictions)
 			f.write("\n      Accuracy at: {}".format(accuracy))
 
 if __name__ == "__main__":
-	train, test, features = get_train_test(True)
+	train, test, features = get_train_test()
 	test_classifiers(train, test, features)

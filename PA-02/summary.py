@@ -16,7 +16,7 @@ TRANSFORM = False
 
 WRITE_TEXT = "Output/Summary-Statistics.txt"
 MISSING = 'NA'
-NUMERICAL = [2,3,4,5,6,7,8,9,10,11]
+NUMERICAL = [1,2,3,4,5,6,7,8,9,10,11]
 CLASS_ID = 1
 HISTOGRAM = [1]
 
@@ -116,7 +116,6 @@ def missing(each, counts, f):
 	else:
 		f.write("\nMissing Values: 0")
 
-# have to do this tonight
 def graph_distribution():
 	return
 
@@ -174,6 +173,7 @@ def summary(counts, maps, numerical, conditional):
 		find_correlations(numerical, f)
 		graph_data_quality(counts, conditional, maps)
 
+# also want to add conditional missing values
 def write_logic(f, numerical, conditional, each):
 	'''
 	Takes file pointer object, two dictionaries, and a key,
@@ -191,6 +191,7 @@ def write_logic(f, numerical, conditional, each):
 	f.write("\nCond. No Max :{}".format(max(conditional[each][NO])))
 	f.write("\nCond. Yes Max :{}".format(max(conditional[each][YES])))
 
+# graph correlation matrix here
 # want to also get t-values here for each bivariate correlation
 # then do multivariate correlations of each against all the others, plus t_values
 def find_correlations(numerical, f):

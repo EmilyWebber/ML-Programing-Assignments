@@ -93,6 +93,17 @@ Cond. Yes Max :250000.0
 SeriousDlqin2yrs
 Missing Values: 0
 Mode: 0, Count: 139974
+Min: 0.0
+Max: 1.0
+Mean: 0.06684
+Median: 0.0
+Std Dev: 0.249744698442
+Conditional No Mean: 0.0
+Cond. Yes Mean: 1.0
+Cond. No Min: 0.0
+Cond. Yes Min: 1.0
+Cond. No Max :0.0
+Cond. Yes Max :1.0
 
 RevolvingUtilizationOfUnsecuredLines
 Missing Values: 0
@@ -160,6 +171,7 @@ Cross-Variable Correlations
      - NumberRealEstateLoansOrLines: 0.433958603055
      - age: 0.147705318271
      - DebtRatio: 0.0495652863151
+     - SeriousDlqin2yrs: -0.0296685684693
      - RevolvingUtilizationOfUnsecuredLines: -0.0112807326942
      - NumberOfTimes90DaysLate: -0.0799843497806
      - NumberOfTime60-89DaysPastDueNotWorse: -0.0710767349585
@@ -169,6 +181,7 @@ Cross-Variable Correlations
      - NumberOfOpenCreditLinesAndLoans: 0.433958603055
      - age: 0.0331502729472
      - DebtRatio: 0.120046028125
+     - SeriousDlqin2yrs: -0.00703811633598
      - RevolvingUtilizationOfUnsecuredLines: 0.00623471342384
      - NumberOfTimes90DaysLate: -0.0452052164555
      - NumberOfTime60-89DaysPastDueNotWorse: -0.0397223323669
@@ -178,6 +191,7 @@ Cross-Variable Correlations
      - NumberOfOpenCreditLinesAndLoans: 0.147705318271
      - NumberRealEstateLoansOrLines: 0.0331502729472
      - DebtRatio: 0.0241878041392
+     - SeriousDlqin2yrs: -0.115385518469
      - RevolvingUtilizationOfUnsecuredLines: -0.00589818298647
      - NumberOfTimes90DaysLate: -0.0610047082761
      - NumberOfTime60-89DaysPastDueNotWorse: -0.0571594642991
@@ -187,6 +201,7 @@ Cross-Variable Correlations
      - NumberOfOpenCreditLinesAndLoans: 0.0495652863151
      - NumberRealEstateLoansOrLines: 0.120046028125
      - age: 0.0241878041392
+     - SeriousDlqin2yrs: -0.00760211982646
      - RevolvingUtilizationOfUnsecuredLines: 0.00396120497616
      - NumberOfTimes90DaysLate: -0.00831964010682
      - NumberOfTime60-89DaysPastDueNotWorse: -0.00753309930933
@@ -196,11 +211,22 @@ Cross-Variable Correlations
 
    MonthlyIncome
 
+   SeriousDlqin2yrs
+     - NumberOfOpenCreditLinesAndLoans: -0.0296685684693
+     - NumberRealEstateLoansOrLines: -0.00703811633598
+     - age: -0.115385518469
+     - DebtRatio: -0.00760211982646
+     - RevolvingUtilizationOfUnsecuredLines: -0.00180150250394
+     - NumberOfTimes90DaysLate: 0.117174613444
+     - NumberOfTime60-89DaysPastDueNotWorse: 0.10226086105
+     - NumberOfTime30-59DaysPastDueNotWorse: 0.125586964573
+
    RevolvingUtilizationOfUnsecuredLines
      - NumberOfOpenCreditLinesAndLoans: -0.0112807326942
      - NumberRealEstateLoansOrLines: 0.00623471342384
      - age: -0.00589818298647
      - DebtRatio: 0.00396120497616
+     - SeriousDlqin2yrs: -0.00180150250394
      - NumberOfTimes90DaysLate: -0.00106124637814
      - NumberOfTime60-89DaysPastDueNotWorse: -0.00104782721576
      - NumberOfTime30-59DaysPastDueNotWorse: -0.00131350096325
@@ -210,6 +236,7 @@ Cross-Variable Correlations
      - NumberRealEstateLoansOrLines: -0.0452052164555
      - age: -0.0610047082761
      - DebtRatio: -0.00831964010682
+     - SeriousDlqin2yrs: 0.117174613444
      - RevolvingUtilizationOfUnsecuredLines: -0.00106124637814
      - NumberOfTime60-89DaysPastDueNotWorse: 0.992796182592
      - NumberOfTime30-59DaysPastDueNotWorse: 0.983602681282
@@ -219,6 +246,7 @@ Cross-Variable Correlations
      - NumberRealEstateLoansOrLines: -0.0397223323669
      - age: -0.0571594642991
      - DebtRatio: -0.00753309930933
+     - SeriousDlqin2yrs: 0.10226086105
      - RevolvingUtilizationOfUnsecuredLines: -0.00104782721576
      - NumberOfTimes90DaysLate: 0.992796182592
      - NumberOfTime30-59DaysPastDueNotWorse: 0.98700544748
@@ -228,6 +256,7 @@ Cross-Variable Correlations
      - NumberRealEstateLoansOrLines: -0.0305645346533
      - age: -0.0629951578011
      - DebtRatio: -0.00654192279047
+     - SeriousDlqin2yrs: 0.125586964573
      - RevolvingUtilizationOfUnsecuredLines: -0.00131350096325
      - NumberOfTimes90DaysLate: 0.983602681282
      - NumberOfTime60-89DaysPastDueNotWorse: 0.98700544748
