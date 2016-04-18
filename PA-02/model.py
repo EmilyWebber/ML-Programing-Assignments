@@ -9,7 +9,7 @@ import features
 WRITE = "Output/Model-Summary.txt"
 TARGET = "SeriousDlqin2yrs"
 
-def get_train_test(configure = False):
+def get_train_test():
 	'''
 	Reads in from global csv files, returns train, test, and features
 	'''
@@ -39,6 +39,8 @@ def test_classifiers(train, test, features):
 			f.write("\n      Accuracy at: {}".format(accuracy))
 
 # add confusion matrix here
+
+# add AUC, ROC
 
 if __name__ == "__main__":
 	train, test, features = get_train_test()
