@@ -38,6 +38,8 @@ def test_classifiers(train, test, features):
 			accuracy = metrics.accuracy_score(train[TARGET], predictions)
 			f.write("\n      Accuracy at: {}".format(accuracy))
 
+# add confusion matrix here
+
 if __name__ == "__main__":
 	train, test, features = get_train_test()
 	test_classifiers(train, test, features)
