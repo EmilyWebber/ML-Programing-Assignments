@@ -1,8 +1,6 @@
 '''
-Magic loops file written by Rayid Ghani
+Based on the skeleton magicloops.py file by Rayid Ghani
 '''
-
-
 from __future__ import division
 import pandas as pd
 import numpy as np
@@ -22,11 +20,22 @@ import pylab as pl
 import matplotlib.pyplot as plt
 from scipy import optimize
 import time
-
+from sklearn.metrics import precision_recall_curve
 
 %matplotlib inline
 
-def define_clfs_params:
+# come back, add access to X and Y, try with one classifier
+
+
+def define_clfs_params():
+    '''
+    Initializes dictionaries of classifiers and parameters
+    '''
+
+    # this tree isn't very deep, only max depth on AdaBoost Decision Tree?
+    # how are these different from using global variables?
+    # wouldn't it be better to keep all the globals in a single place?
+    # does this include bagging and boosting?
 
     clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
@@ -53,39 +62,71 @@ def define_clfs_params:
     'KNN' :{'n_neighbors': [1,5,10,25,50,100],'weights': ['uniform','distance'],'algorithm': ['auto','ball_tree','kd_tree']}
            }
 
-def clf_loop():
+    return clfs, grid
+
+def magic_loop(models_to_run, clfs, grid, X, y):
+    '''
+    Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
+    '''
+    table = []
+
+    # isn't this a pretty low recall level? I thought .25 was more standard
+    k = 0.05
+
     for n in range(1, 2):
-        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=0)
-        for index,clf in enumerate([clfs[x] for x in models_to_run]):
-            print models_to_run[index]
-            parameter_values = grid[models_to_run[index]]
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
+        for index, clf in enumerate([clfs[x] for x in models_to_run]):
+            m = models_to_run[index]
+
+            print ("Walking through model {}".format(m))
+            parameter_values = grid[m]
+
             for p in ParameterGrid(parameter_values):
                 try:
                     clf.set_params(**p)
-                    print clf
+                    print ("Params for {} set to {}".format(m, clf))
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
-                    #threshold = np.sort(y_pred_probs)[::-1][int(.05*len(y_pred_probs))]
-                    #print threshold
-                    print precision_at_k(y_test,y_pred_probs,.05)
-                    #plot_precision_recall_n(y_test,y_pred_probs,clf)
+                    plot_precision_recall_n(y_test, y_pred_probs, clf)
+                    table = scoring(table, k, y_test, y_pred_probs)
+
                 except IndexError, e:
-                    print 'Error:',e
+                    print 'Error:', e
                     continue
 
+    return table
 
+def scoring(table, k, y_test, y_pred_probs):
+    '''
+    Takes results of classifier, adds metrics to result table, 
+    '''
+    # get AUC, F1, accuracy
+    l = []
+    s = precision_at_k(y_test, y_pred_probs, k)
+    print ("Precision at {} is {}".format(k, s))
+
+    table.append(l)
+    return table
+
+
+# this does just one plot for one specification of one model, can't we show everything on the same graph?
 
 def plot_precision_recall_n(y_true, y_prob, model_name):
-    from sklearn.metrics import precision_recall_curve
+    '''
+    Takes the model, plots precision and recall curves
+    '''
+
     y_score = y_prob
     precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
     precision_curve = precision_curve[:-1]
     recall_curve = recall_curve[:-1]
     pct_above_per_thresh = []
     number_scored = len(y_score)
+
     for value in pr_thresholds:
-        num_above_thresh = len(y_score[y_score>=value])
+        num_above_thresh = len(y_score[y_score >= value])
         pct_above_thresh = num_above_thresh / float(number_scored)
         pct_above_per_thresh.append(pct_above_thresh)
+
     pct_above_per_thresh = np.array(pct_above_per_thresh)
     plt.clf()
     fig, ax1 = plt.subplots()
@@ -102,18 +143,29 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     plt.show()
 
 def precision_at_k(y_true, y_scores, k):
+    '''
+    For a given level of K, return the precision score
+    '''
     threshold = np.sort(y_scores)[::-1][int(k*len(y_scores))]
+    
+    print ("threshold set to {}".format(threshold))
     y_pred = np.asarray([1 if i >= threshold else 0 for i in y_scores])
     return metrics.precision_score(y_true, y_pred)
 
 
+def record_table(table):
+    '''
+    Takes nxm array, prints out results to a csv
+    '''
+    return
+
 def main():
 
-    clfs,params = define_clfs_params()
-    models_to_run=['KNN','RF','LR','ET','AB','GB','NB','DT']
+    clfs, grid = define_clfs_params()
+    models_to_run = ['KNN','RF','LR','ET','AB','GB','NB','DT']
     #get X and y
-    magic_loop(models_to_run,clfs,params,X,y)
-
+    table =  magic_loop(models_to_run, clfs, grid, X, y)
+    record_table(table)
 
 
 if __name__ == '__main__':
