@@ -1,13 +1,13 @@
 # Next Iteration
 
 - Edits
- -- Use histograms instead of scatter plots
- -- Use more plots: more histograms over predictors, and more histograms over pairs of predictors
- -- Change get_header() function
- -- Change read file to parameter, not global variables
- -- Set all global variables in one place if they're coming directly from the data set
- -- Have test_classifier() return a dictionary instead of writing to a file
- -- Imput values in held out set from training stats
+	- Use histograms instead of scatter plots
+ 	- Use more plots: more histograms over predictors, and more histograms over pairs of predictors
+ 	- Change get_header() function
+ 	- Change read file to parameter, not global variables
+ 	- Set all global variables in one place if they're coming directly from the data set
+ 	- Have test_classifier() return a dictionary instead of writing to a file
+ 	- Imput values in held out set from training stats
 
 - Add to Implementation
 	- Split to train and test set
