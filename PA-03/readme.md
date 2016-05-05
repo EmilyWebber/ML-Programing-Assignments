@@ -5,6 +5,7 @@
  	- Use more plots: more histograms over predictors, and more histograms over pairs of predictors
  	- Change get_header() function
  	- Change read file to parameter, not global variables
+ 		- What's the added benefit of using the filename as a parameter, and not as a global variable?
  	- Set all global variables in one place if they're coming directly from the data set
  	- Have test_classifier() return a dictionary instead of writing to a file
  	- Imput values in held out set from training stats

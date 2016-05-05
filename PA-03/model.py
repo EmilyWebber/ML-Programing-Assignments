@@ -22,10 +22,10 @@ from scipy import optimize
 import time
 from sklearn.metrics import precision_recall_curve
 
-%matplotlib inline
-
 # come back, add access to X and Y, try with one classifier
 
+# change this to take in as a parameter
+FILE = "/home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv"
 
 def define_clfs_params():
     '''
@@ -79,6 +79,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
             m = models_to_run[index]
 
             print ("Walking through model {}".format(m))
+            
             parameter_values = grid[m]
 
             for p in ParameterGrid(parameter_values):
@@ -99,7 +100,7 @@ def scoring(table, k, y_test, y_pred_probs):
     '''
     Takes results of classifier, adds metrics to result table, 
     '''
-    # get AUC, F1, accuracy
+    # get AUC, F1, accuracy, confusion matrix
     l = []
     s = precision_at_k(y_test, y_pred_probs, k)
     print ("Precision at {} is {}".format(k, s))
@@ -140,7 +141,8 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     name = model_name
     plt.title(name)
     #plt.savefig(name)
-    plt.show()
+    # plt.show()
+    print ("made it to plotting again!")
 
 def precision_at_k(y_true, y_scores, k):
     '''
@@ -159,18 +161,20 @@ def record_table(table):
     '''
     return
 
-def main():
+def get_x_and_y(filename):
+    df = pd.read_csv(filename)
+    Y = df['SeriousDlqin2yrs']
+    df = df.drop('SeriousDlqin2yrs', 1)
+    df = df.drop(df.columns[[0]], axis=1)
+    return df, Y
 
+def main(filename):
     clfs, grid = define_clfs_params()
     models_to_run = ['KNN','RF','LR','ET','AB','GB','NB','DT']
-    #get X and y
+    X, y = get_x_and_y(filename)
     table =  magic_loop(models_to_run, clfs, grid, X, y)
     record_table(table)
 
 
 if __name__ == '__main__':
-    main()
-
-
-
-
+    main(FILE)
