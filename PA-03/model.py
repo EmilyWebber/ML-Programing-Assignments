@@ -22,6 +22,8 @@ from scipy import optimize
 import time
 from sklearn.metrics import precision_recall_curve
 import sklearn.metrics as metrics
+import datetime
+
 
 # change this to take in as a parameter
 FILE = "/home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv"
@@ -84,7 +86,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
             for p in ParameterGrid(parameter_values):
                 try:
                     clf.set_params(**p)
-                    print ("Params for {} set to {}".format(m, clf))
+                    print (clf)
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
                     plot_precision_recall_n(y_test, y_pred_probs, clf)
                     l = scoring(k, y_test, y_pred_probs)
@@ -104,6 +106,8 @@ def scoring(k, y_test, y_pred_probs):
     try:
         l['precision'] = precision_at_k(y_test, y_pred_probs, k)
         fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
+        l['fpr'] = fpr
+        l['tpr'] = tpr
         l['auc'] = metrics.auc(fpr, tpr)
         l['accuracy'] = metrics.accuracy_score(y_test, y_pred_probs)
         l['F1'] = metrics.f1_score(y_test, y_pred_probs)
@@ -112,14 +116,12 @@ def scoring(k, y_test, y_pred_probs):
 
     return l
 
-
-# this does just one plot for one specification of one model, can't we show everything on the same graph?
-
 def plot_precision_recall_n(y_true, y_prob, model_name):
     '''
     Takes the model, plots precision and recall curves
     '''
-
+    print ("made it to plotting again!")
+    return
     y_score = y_prob
     precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
     precision_curve = precision_curve[:-1]
@@ -146,7 +148,7 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     plt.title(name)
     #plt.savefig(name)
     # plt.show()
-    print ("made it to plotting again!")
+
 
 def precision_at_k(y_true, y_scores, k):
     '''
@@ -175,10 +177,12 @@ def get_x_and_y(filename):
 def main(filename):
     clfs, grid = define_clfs_params()
     models_to_run = ['KNN','RF','LR','ET','AB','GB','NB','DT']
+    #models_to_run = ['RF']
     X, y = get_x_and_y(filename)
     table =  magic_loop(models_to_run, clfs, grid, X, y)
     record_table(table)
 
 
 if __name__ == '__main__':
+    print ("================= Running test at {} ====================".format(str(datetime.datetime.now())))
     main(FILE)
