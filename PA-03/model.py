@@ -21,8 +21,7 @@ import matplotlib.pyplot as plt
 from scipy import optimize
 import time
 from sklearn.metrics import precision_recall_curve
-
-# come back, add access to X and Y, try with one classifier
+import sklearn.metrics as metrics
 
 # change this to take in as a parameter
 FILE = "/home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv"
@@ -68,7 +67,7 @@ def magic_loop(models_to_run, clfs, grid, X, y):
     '''
     Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
     '''
-    table = []
+    table = {}
 
     # isn't this a pretty low recall level? I thought .25 was more standard
     k = 0.05
@@ -88,7 +87,8 @@ def magic_loop(models_to_run, clfs, grid, X, y):
                     print ("Params for {} set to {}".format(m, clf))
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
                     plot_precision_recall_n(y_test, y_pred_probs, clf)
-                    table = scoring(table, k, y_test, y_pred_probs)
+                    l = scoring(k, y_test, y_pred_probs)
+                    table[clf] = l
 
                 except IndexError, e:
                     print 'Error:', e
@@ -96,17 +96,21 @@ def magic_loop(models_to_run, clfs, grid, X, y):
 
     return table
 
-def scoring(table, k, y_test, y_pred_probs):
+def scoring(k, y_test, y_pred_probs):
     '''
     Takes results of classifier, adds metrics to result table, 
     '''
-    # get AUC, F1, accuracy, confusion matrix
-    l = []
-    s = precision_at_k(y_test, y_pred_probs, k)
-    print ("Precision at {} is {}".format(k, s))
+    l = {}
+    try:
+        l['precision'] = precision_at_k(y_test, y_pred_probs, k)
+        fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
+        l['auc'] = metrics.auc(fpr, tpr)
+        l['accuracy'] = metrics.accuracy_score(y_test, y_pred_probs)
+        l['F1'] = metrics.f1_score(y_test, y_pred_probs)
+    except:
+        print ("Couldn't get result metrics here")
 
-    table.append(l)
-    return table
+    return l
 
 
 # this does just one plot for one specification of one model, can't we show everything on the same graph?
@@ -157,7 +161,7 @@ def precision_at_k(y_true, y_scores, k):
 
 def record_table(table):
     '''
-    Takes nxm array, prints out results to a csv
+    Takes dictionary, prints out results to a file
     '''
     return
 
