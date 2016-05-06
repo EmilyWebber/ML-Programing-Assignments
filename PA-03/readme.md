@@ -1,20 +1,16 @@
-# Next Iteration
+# Contents
 
- - Edits: transform.py
- 	- imput missing values
- 	- file as parameter
- 	- Set all global variables in one place if they're coming directly from the data set
- - Edits: model.py
- 	- file as parameter
- 	- Imput values in held out set from training set alone
- 	- pick top ten classifiers at the end and make a table with them
- - Last 
- 	- bagging
- 	- F1 and Accuracy
+- model.py: Collection of models and parameters to use on imputed data:
+	- running instructions: 
+	```
+	python model.py /home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv
+	```
+	- the models used in each run can be changed by manually altering the list in main()
+	- The recall threshold K can be by changed manually in the function magic_loop()
+	- The magic_loop() function is set to pick the top ten models with the highest precision at the given level of K, and these are reported in Output/Final_table.txt.
+		- Either 'precision' or 'auc' can be used as the preferred metric, this can be done in magic_loop() line 81
 
- - Report
- 	- more histograms and more plots
- 		- histograms over predictors, and pairs of predictors
- 	- table of top ten classifiers
- 	- ROC curve for top 5
- 	- discussion of which one is best and why
+- Output
+	- Collection of logs and results
+	- Images: 
+		- Precision and Recall curvers for various classifiers

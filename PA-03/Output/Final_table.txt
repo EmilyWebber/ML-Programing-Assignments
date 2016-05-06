@@ -1,51 +1,62 @@
 Top Ten AUC Classifiers 
-
-0.851593334782 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.857076661206 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.852201428979 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.862011044827 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.858426463296 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.853753835758 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.866645915969 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.871665669488 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.87161329376 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
-
-0.859386323144 with auc DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=100,
-            max_features='log2', max_leaf_nodes=None, min_samples_leaf=1,
-            min_samples_split=10, min_weight_fraction_leaf=0.0,
-            presort=False, random_state=None, splitter='best')
+ 
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+  
+ExtraTreesClassifier(bootstrap=False, class_weight=None, criterion='entropy',
+           max_depth=10, max_features='log2', max_leaf_nodes=None,
+           min_samples_leaf=1, min_samples_split=5,
+           min_weight_fraction_leaf=0.0, n_estimators=10, n_jobs=-1,
+           oob_score=False, random_state=None, verbose=0, warm_start=False)
+ 

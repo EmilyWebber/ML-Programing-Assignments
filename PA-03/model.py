@@ -22,9 +22,7 @@ from sklearn.metrics import precision_recall_curve
 import sklearn.metrics as metrics
 import datetime
 import heapq
-
-# change this to take in as a parameter
-FILE = "/home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv"
+import sys
 
 def define_clfs_params():
     '''
@@ -42,15 +40,18 @@ def define_clfs_params():
         'KNN': KNeighborsClassifier(n_neighbors=3)
             }
     grid = {
-    'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+    # 'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+    'RF':{'n_estimators': [1,10,100], 'max_depth': [1,5,10], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5]},
     'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001,0.01,0.1,1,10]},
     'SGD': { 'loss': ['hinge','log','perceptron'], 'penalty': ['l2','l1','elasticnet']},
-    'ET': { 'n_estimators': [1,10,100,1000,10000], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+    # 'ET': { 'n_estimators': [1,10,100,1000,10000], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
+   'ET': { 'n_estimators': [1,10], 'criterion' : ['gini', 'entropy'] ,'max_depth': [1,5,10], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5]},
     'AB': { 'algorithm': ['SAMME', 'SAMME.R'], 'n_estimators': [1,10,100,1000,10000]},
     'GB': {'n_estimators': [1,10,100,1000,10000], 'learning_rate' : [0.001,0.01,0.05,0.1,0.5],'subsample' : [0.1,0.5,1.0], 'max_depth': [1,3,5,10,20,50,100]},
     'NB' : {},
     'DT': {'criterion': ['gini', 'entropy'], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
-    'SVM' :{'C' :[0.00001,0.0001,0.001,0.01,0.1,1,10],'kernel':['linear']},
+    # 'SVM' :{'C' :[0.00001,0.0001,0.001,0.01,0.1,1,10],'kernel':['linear']},
+    'SVM' :{'C' :[0],'kernel':['linear']},
     'KNN' :{'n_neighbors': [1,5,10,25,50,100],'weights': ['uniform','distance'],'algorithm': ['auto','ball_tree','kd_tree']}
            }
     return clfs, grid
@@ -58,6 +59,7 @@ def define_clfs_params():
 def magic_loop(models_to_run, clfs, grid, X, y):
     '''
     Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
+    Set to find ten models with best precision at 5 percent recall
     '''
     table = {}
     top = []
@@ -71,20 +73,20 @@ def magic_loop(models_to_run, clfs, grid, X, y):
             for p in ParameterGrid(grid[models_to_run[index]]):
                 try:
                     clf.set_params(**p)
-                    # print (clf)
+                    print (clf)
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
                     plot_precision_recall_n(y_test, y_pred_probs, clf)
                     l = scoring(k, y_test, y_pred_probs)
                     m, s = top[0]
-                    auc = l['auc']
-                    if auc > m:
-                        print ("switching out {}".format(auc))
-                        heapq.heapreplace(top, (auc, clf))
-
+                    p = l['precision']
+                    if p > m:
+                        heapq.heapreplace(top, (p, clf))
+                        table[str(clf)] = l
                 except: 
                     print ('Error:')
                     continue
-    return top
+    print (top)
+    return top, table
 
 def scoring(k, y_test, y_pred_probs):
     '''
@@ -93,24 +95,14 @@ def scoring(k, y_test, y_pred_probs):
     l = {}
     l['precision'], y_scores = precision_at_k(y_test, y_pred_probs, k)
     fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
-    l['fpr'] = fpr
-    l['tpr'] = tpr
     l['auc'] = metrics.auc(fpr, tpr)
-    # try:
-
-    #     l['accuracy'] = metrics.accuracy_score(y_test, y_scores)
-    # except:
-    #     print ("Couldn't get result metrics here")
-
     return l
 
 def plot_precision_recall_n(y_true, y_prob, model_name):
     '''
     Takes the model, plots precision and recall curves
     '''
-    # why the copy here? They both reference the same thing.
     y_score = y_prob
-
     precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
     precision_curve = precision_curve[:-1]
     recall_curve = recall_curve[:-1]
@@ -137,7 +129,7 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
         plt.title(name)
         plt.savefig("Output/Images/{}.png".format(name))
     except:
-        name = name[:15]
+        name = name[:75]
         plt.title(name)
         plt.savefig("Output/Images/{}.png".format(name))
     plt.close()
@@ -150,17 +142,21 @@ def precision_at_k(y_true, y_scores, k):
     y_pred = np.asarray([1 if i >= threshold else 0 for i in y_scores])
     return metrics.precision_score(y_true, y_pred), y_scores
 
-def record_table(table):
+def record_table(top, table):
     '''
     Takes dictionary, prints out results to a file
     '''
     with open("Output/Final_table.txt", 'w') as f:
         f.write("Top Ten AUC Classifiers \n")
-        for clf, auc in table:
-            f.write("\nAUC: {} from {}\n".format(str(clf), auc))
+        print (table)
+        for auc, clf in top:
+            f.write(" \n{}\n ".format(str(clf), table[str(clf)]))
     return
 
 def get_x_and_y(filename):
+    '''
+    Reads in from transformed csv file and generates X and Y arrays
+    '''
     df = pd.read_csv(filename)
     Y = df['SeriousDlqin2yrs']
     df = df.drop('SeriousDlqin2yrs', 1)
@@ -173,11 +169,10 @@ def main(filename):
     '''
     clfs, grid = define_clfs_params()
     # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
-    models_to_run = ['DT', 'LR', 'ET', 'AB', 'NB']
+    models_to_run = ['ET']
     X, y = get_x_and_y(filename)
-    top =  magic_loop(models_to_run, clfs, grid, X, y)
-    record_table(top)
+    top, table =  magic_loop(models_to_run, clfs, grid, X, y)
+    record_table(top, table)
 
-if __name__ == '__main__':
-    print ("================= Running test at {} ====================".format(str(datetime.datetime.now())))
-    main(FILE)
+if __name__ == '__main__': 
+    main(sys.argv[1])
