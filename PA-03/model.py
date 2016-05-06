@@ -1,6 +1,3 @@
-'''
-Based on the skeleton magicloops.py file by Rayid Ghani
-'''
 from __future__ import division
 import pandas as pd
 import numpy as np
@@ -18,12 +15,13 @@ from sklearn.preprocessing import StandardScaler
 import random
 import pylab as pl
 import matplotlib.pyplot as plt
+plt.style.use('ggplot')
 from scipy import optimize
 import time
 from sklearn.metrics import precision_recall_curve
 import sklearn.metrics as metrics
 import datetime
-
+import heapq
 
 # change this to take in as a parameter
 FILE = "/home/egwebber/ML-Programing-Assignments/PA-02/Output/conditional_transformed.csv"
@@ -32,12 +30,6 @@ def define_clfs_params():
     '''
     Initializes dictionaries of classifiers and parameters
     '''
-
-    # this tree isn't very deep, only max depth on AdaBoost Decision Tree?
-    # how are these different from using global variables?
-    # wouldn't it be better to keep all the globals in a single place?
-    # does this include bagging and boosting?
-
     clfs = {'RF': RandomForestClassifier(n_estimators=50, n_jobs=-1),
         'ET': ExtraTreesClassifier(n_estimators=10, n_jobs=-1, criterion='entropy'),
         'AB': AdaBoostClassifier(DecisionTreeClassifier(max_depth=1), algorithm="SAMME", n_estimators=200),
@@ -49,7 +41,6 @@ def define_clfs_params():
         'SGD': SGDClassifier(loss="hinge", penalty="l2"),
         'KNN': KNeighborsClassifier(n_neighbors=3)
             }
-
     grid = {
     'RF':{'n_estimators': [1,10,100,1000,10000], 'max_depth': [1,5,10,20,50,100], 'max_features': ['sqrt','log2'],'min_samples_split': [2,5,10]},
     'LR': { 'penalty': ['l1','l2'], 'C': [0.00001,0.0001,0.001,0.01,0.1,1,10]},
@@ -62,7 +53,6 @@ def define_clfs_params():
     'SVM' :{'C' :[0.00001,0.0001,0.001,0.01,0.1,1,10],'kernel':['linear']},
     'KNN' :{'n_neighbors': [1,5,10,25,50,100],'weights': ['uniform','distance'],'algorithm': ['auto','ball_tree','kd_tree']}
            }
-
     return clfs, grid
 
 def magic_loop(models_to_run, clfs, grid, X, y):
@@ -70,49 +60,47 @@ def magic_loop(models_to_run, clfs, grid, X, y):
     Takes a list of models to use, two dictionaries of classifiers and parameters, and array of X
     '''
     table = {}
-
-    # isn't this a pretty low recall level? I thought .25 was more standard
+    top = []
+    for i in range(10):
+        top.append((0, " "))
+    heapq.heapify(top)
     k = 0.05
-
     for n in range(1, 2):
         X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0)
         for index, clf in enumerate([clfs[x] for x in models_to_run]):
-            m = models_to_run[index]
-
-            print ("Walking through model {}".format(m))
-            
-            parameter_values = grid[m]
-
-            for p in ParameterGrid(parameter_values):
+            for p in ParameterGrid(grid[models_to_run[index]]):
                 try:
                     clf.set_params(**p)
-                    print (clf)
+                    # print (clf)
                     y_pred_probs = clf.fit(X_train, y_train).predict_proba(X_test)[:,1]
                     plot_precision_recall_n(y_test, y_pred_probs, clf)
                     l = scoring(k, y_test, y_pred_probs)
-                    table[clf] = l
+                    m, s = top[0]
+                    auc = l['auc']
+                    if auc > m:
+                        print ("switching out {}".format(auc))
+                        heapq.heapreplace(top, (auc, clf))
 
-                except IndexError, e:
-                    print 'Error:', e
+                except: 
+                    print ('Error:')
                     continue
-
-    return table
+    return top
 
 def scoring(k, y_test, y_pred_probs):
     '''
     Takes results of classifier, adds metrics to result table, 
     '''
     l = {}
-    try:
-        l['precision'] = precision_at_k(y_test, y_pred_probs, k)
-        fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
-        l['fpr'] = fpr
-        l['tpr'] = tpr
-        l['auc'] = metrics.auc(fpr, tpr)
-        l['accuracy'] = metrics.accuracy_score(y_test, y_pred_probs)
-        l['F1'] = metrics.f1_score(y_test, y_pred_probs)
-    except:
-        print ("Couldn't get result metrics here")
+    l['precision'], y_scores = precision_at_k(y_test, y_pred_probs, k)
+    fpr, tpr, thresholds = metrics.roc_curve(y_test, y_pred_probs)
+    l['fpr'] = fpr
+    l['tpr'] = tpr
+    l['auc'] = metrics.auc(fpr, tpr)
+    # try:
+
+    #     l['accuracy'] = metrics.accuracy_score(y_test, y_scores)
+    # except:
+    #     print ("Couldn't get result metrics here")
 
     return l
 
@@ -120,9 +108,9 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     '''
     Takes the model, plots precision and recall curves
     '''
-    print ("made it to plotting again!")
-    return
+    # why the copy here? They both reference the same thing.
     y_score = y_prob
+
     precision_curve, recall_curve, pr_thresholds = precision_recall_curve(y_true, y_score)
     precision_curve = precision_curve[:-1]
     recall_curve = recall_curve[:-1]
@@ -144,27 +132,32 @@ def plot_precision_recall_n(y_true, y_prob, model_name):
     ax2.plot(pct_above_per_thresh, recall_curve, 'r')
     ax2.set_ylabel('recall', color='r')
 
-    name = model_name
-    plt.title(name)
-    #plt.savefig(name)
-    # plt.show()
-
+    name = str(model_name)
+    try:
+        plt.title(name)
+        plt.savefig("Output/Images/{}.png".format(name))
+    except:
+        name = name[:15]
+        plt.title(name)
+        plt.savefig("Output/Images/{}.png".format(name))
+    plt.close()
 
 def precision_at_k(y_true, y_scores, k):
     '''
     For a given level of K, return the precision score
     '''
     threshold = np.sort(y_scores)[::-1][int(k*len(y_scores))]
-    
-    print ("threshold set to {}".format(threshold))
     y_pred = np.asarray([1 if i >= threshold else 0 for i in y_scores])
-    return metrics.precision_score(y_true, y_pred)
-
+    return metrics.precision_score(y_true, y_pred), y_scores
 
 def record_table(table):
     '''
     Takes dictionary, prints out results to a file
     '''
+    with open("Output/Final_table.txt", 'w') as f:
+        f.write("Top Ten AUC Classifiers \n")
+        for clf, auc in table:
+            f.write("\nAUC: {} from {}\n".format(str(clf), auc))
     return
 
 def get_x_and_y(filename):
@@ -175,13 +168,15 @@ def get_x_and_y(filename):
     return df, Y
 
 def main(filename):
+    '''
+    Executes functions sequentially, records main classifiers to output text file
+    '''
     clfs, grid = define_clfs_params()
-    models_to_run = ['KNN','RF','LR','ET','AB','GB','NB','DT']
-    #models_to_run = ['RF']
+    # models_to_run = ['LR','ET','AB','GB','NB','DT', 'KNN','RF']
+    models_to_run = ['DT', 'LR', 'ET', 'AB', 'NB']
     X, y = get_x_and_y(filename)
-    table =  magic_loop(models_to_run, clfs, grid, X, y)
-    record_table(table)
-
+    top =  magic_loop(models_to_run, clfs, grid, X, y)
+    record_table(top)
 
 if __name__ == '__main__':
     print ("================= Running test at {} ====================".format(str(datetime.datetime.now())))
